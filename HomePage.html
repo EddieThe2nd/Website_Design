@@ -24,7 +24,7 @@
                             <li><a href="./Jewellery/Jewellery.html">Jewellery</a></li>
                         </ul>
                     </div>
-                
+                <!-- will remove this -->
                 </li>            
                 
                 <li><a href="./ContactUs/ContactUsPage.html">Contact</a></li>

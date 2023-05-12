@@ -8,31 +8,50 @@
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-    <h1>My Profile</h1>
-    <img src="./FeaturedProductsImages/userpic.jpg" alt="My profile picture" id="profile-pic">
-    
-    <div class="AccInfo">
-        <h2>Account Information</h2>
-    <ul >
-        <li>Name: Andrew Letsepe</li>
-        <li>Date of Birth: 04 December 2000</li>
-        <li>Email: xtla1298@gmail.com</li>
-        <li>Phone: 060 856 7730</li>
-        <li>Gender: Male</li>
-        <li>Address: 1 Menton rd,Auckland Park</li>
-        <!-- Add more account details as needed -->
-    </ul>
-    </div>
-    
-    <div class="Actions">
-        <h2>Actions</h2>
-        <ul>
-            <li><a href="#">Edit Profile</a></li>
-            <li><a href="#">Change Password</a></li>
-            <li><a href="#">Delete Account</a></li>
-            <!-- Add more actions as needed -->
-        </ul>
-    </div>
+    <div class="container">
+		<div class="profile-pic">
+			<img src="profile-pic.jpg" alt="Profile Picture">
+		</div>
+		<div class="details">
+			<h2>John Doe</h2>
+			<button class="edit-btn">Edit</button>
+			<ul>
+				<li><strong>Surname:</strong> Doe</li>
+				<li><strong>Age:</strong> 28</li>
+				<li><strong>Gender:</strong> Male</li>
+				<li><strong>ID Number:</strong> 1234567890</li>
+				<li><strong>Email Address:</strong> johndoe@gmail.com</li>
+				<li><strong>Phone Number:</strong> 123-456-7890</li>
+				<li><strong>Bio:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mauris vel felis tincidunt, ac lobortis tellus suscipit.</li>
+			</ul>
+		</div>
+		<div class="form-container">
+			<form>
+				<h2>Edit Profile</h2>
+				<label for="surname">Surname:</label>
+				<input type="text" id="surname" name="surname">
+				<label for="age">Age:</label>
+				<input type="text" id="age" name="age">
+				<label for="gender">Gender:</label>
+				<select id="gender" name="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select>
+				<label for="id-number">ID Number:</label>
+				<input type="text" id="id-number" name="id-number">
+				<label for="email">Email Address:</label>
+				<input type="email" id="email" name="email">
+				<label for="phone">Phone Number:</label>
+				<input type="tel" id="phone" name="phone">
+				<label for="bio">Bio:</label>
+				<textarea id="bio" name="bio"></textarea>
+				<button class="save-btn">Save</button>
+				<button class="cancel-btn">Cancel</button>
+			</form>
+		</div>
+	</div>
+	<script src="script.js"></script>
     
     <script src="profile.js"></script>
 </body>

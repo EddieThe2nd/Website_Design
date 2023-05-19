@@ -1,57 +1,101 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 20px;
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
-h2 {
-  margin-top: 30px;
-  font-size: 24px;
+.profile-pic {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.profile-pic img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
 }
 
-li {
-  margin-bottom: 10px;
+.details h2 {
+	margin-bottom: 10px;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+.details ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
+.details li {
+	margin-bottom: 10px;
 }
 
-a:hover {
-  text-decoration: underline;
+.edit-btn {
+	margin-bottom: 10px;
 }
 
-.AccInfo
-{
-    position: relative;
-    justify-content: center;
-    display:block;
-    align-items: center;
-    left: 45%;
+.form-container {
+	display: none;
+	margin-top: 20px;
 }
 
-.Actions
-{
-    position: relative;
-    justify-content: center;
+.form-container form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-container h2 {
+	margin-bottom: 10px;
+}
+
+.form-container label {
+	margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+	margin-bottom: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+}
+
+.form-container textarea {
+	resize: vertical;
+}
+
+.form-container .save-btn,
+.form-container .cancel-btn {
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.form-container .save-btn {
+	background-color: #4CAF50;
+}
+
+.form-container .cancel-btn {
+	background-color: #f44336;
+}
+
+.show-form .details {
+	display: none;
+}
+
+.show-form .form-container {
+	display: block;
 }

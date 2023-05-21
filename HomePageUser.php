@@ -31,7 +31,7 @@
                 <li> <a class="active" href="HomePageUser.html">Home</a></li>
                 <li><a href="./AboutUs-Page/AboutUsPage.html">About Us</a></li>           
                 <li><a href="./Artists/ArtistPage.html">Artist</a></li>
-                <li><a href="#">Products!!!</a>
+                <li><a href="#">Products</a>
                     <div class="Subpg1">
                         <ul>
                             <li><a href="./Art/Art.php">Art</a></li>

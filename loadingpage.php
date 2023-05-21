@@ -1,7 +1,11 @@
+<?php
+require('./config/server.php')
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Loading Animation</title>
+	<title>UJ-DesignEclat</title>
 	<link rel="stylesheet" type="text/css" href="loadingPage.css">
 </head>
 <body>

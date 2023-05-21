@@ -10,5 +10,5 @@ const profileButton = document.getElementById("profile");
 profileButton.addEventListener('click', (event) => 
 {
     event.preventDefault(); // Prevent the default form submission
-    window.location.href = 'profile.html';
+    window.location.href = 'profile.php';
 }); 

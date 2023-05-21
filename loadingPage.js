@@ -1,3 +1,3 @@
 setTimeout(function() {
-    window.location.href = "HomePageUser.html";
+    window.location.href = "HomePageUser.php";
   }, 5000);

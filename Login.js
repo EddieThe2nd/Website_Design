@@ -9,6 +9,10 @@ submitButton.addEventListener('click', (event) => {
     // alert('Please enter a username.');
     window.location.href = 'loadingpage.html'; 
   }
+  else if(usernameInput.value === 'admin' && passwordInput.value === 'admin')
+  {
+    window.location.href = 'dashboard.html';
+  }
   else
   {
     alert('Please enter a username and password.');

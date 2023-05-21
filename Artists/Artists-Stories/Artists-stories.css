@@ -1,0 +1,34 @@
+body{
+    background-image: url("./coral.gif");
+    color: #F0F0F0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+.p1{
+    margin-left: 500px;
+}
+
+.H2{
+    text-align: center;
+}
+
+.img1{
+    width: 200px;
+    height: 260px;
+    justify-content: space-around;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+    transition: 1s;
+}
+
+.img1:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.first{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: monospace;
+}

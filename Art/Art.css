@@ -5,8 +5,9 @@
 }
 body{
     background-color: #F0F0F0;
-
-
+    background-image: url("./coral.gif");
+    color: #F0F0F0;
+    font-weight: bold;
 }
 .header h2{
     font-family: sans-serif;

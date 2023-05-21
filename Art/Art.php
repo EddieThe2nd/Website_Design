@@ -6,60 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art</title>
     <link rel="stylesheet" href="./Art.css">
+    <script src="art.js" async></script>
 
 </head>
 <body>
+
+    <div class="video_container">
+        <video autoplay muted loop id="myVideo">
+            <source src="4k ink drop black.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <section>
         <div class="header">
-            <h2>Art<h2>
-                
+            <h2>Art<h2>  
         </div>
+    </section>
+    <br>
+    <br>
         <!-- <h1 class="Heading">Welcome to the World of Art Re-Imagined</h1> -->
-    <div class="img-Container">
-        <div class="first">
-            <div>
-                <img src="./_18A1291.jpeg" alt="" class="img1">
-                <p>Greens by Boemo Diale</p>
+    <section class="container content-section">
+        <div class="shop_items">
+            <div class="item">
+                <img src="_18A1291.jpeg" alt="" class="img1">
+                <p class="item_title">Come Alive by Dr Feels</p>
+                <div>
+                    <span class="item_price">R580.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
             </div>
-            <div>
-                <img src="./DSCF2458.jpeg" alt="" class="img1">
-                <p>Expressions by Yolanda</p>
+            <div class="item">
+                <img src="DSCF2458.jpeg" alt="" class="img1">
+                <p class="item_title">Expressions by Dr Feels</p>
+                <div>
+                    <span class="item_price">R180.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
             </div>
-            <div >
-                <img src="./DSCF2502.jpeg" alt="" class="img1">
-                <p>Im here by Charity</p>
+            <div class="item">
+                <img src="DSCF2502.jpeg" alt="" class="img1">
+                <p class="item_title">I'm Here by Donnell</p>
+                <div>
+                    <span class="item_price">R200.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
             </div>
-            <div>
-                <img src="./DSCF2679.jpg" alt="" class="img1">
-                <p>Siblings by Seth Pimentel</p>
-            </div>
-            
-        </div>
-        
-        <div class="second">
-            <div>
-                <img src="./DSCF9687.jpeg" alt="" class="img1">
-                <p>MotherLand by Mncedi Madolo</p>
-            </div>
-            <div>
-                <img src="./DSCF9693.jpeg" alt="" class="img1">
-                <p>Africa Rise by Isaac</p>
-            </div>
-            <div>
-                <img src="./Exhibition+Installation+(2).jpeg" alt="" class="img1">
-                <p>Alive by Boemo Diale</p>
-            </div>
-            <div>
-                <img src="./k+146.png" alt="" class="img1">
-                <p>The People by Isaac</p>
+            <div class="item">
+                <img src="DSCF2679.jpg" alt="" class="img1">
+                <p class="item_title">Cosy by Donnell</p>
+                <div>
+                    <span class="item_price">R95.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
             </div>
             
         </div>
-        
-       
-      
-        
-    </div>
+    </section>
+    <br>
+    <br>
+    <section class="container content-section">
+        <div class="shop_items">
+            <div class="item">
+                <img src="DSCF9687.jpeg" alt="" class="img1">
+                <p class="item_title">MotherLand by Randy Ngubo</p>
+                <div>
+                    <span class="item_price">R70.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="DSCF9705.jpeg" alt="" class="img1">
+                <p class="item_title">MaXhosa by Randy Ngubo</p>
+                <div>
+                    <span class="item_price">R420.79</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Exhibition+Installation+(2).jpeg" alt="" class="img1">
+                <p class="item_title">Alive by Tumelo Obi</p>
+                <div>
+                    <span class="item_price">R1000.0</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="k+146.png" alt="" class="img1">
+                <p class="item_title">The People by Tokyo Ngazi</p>
+                <div>
+                    <span class="item_price">R1780.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <br>
+    <br>
+    <section class="container content-section">
+        <div class="shop_items">
+            <div class="item">
+                <img src="Screenshot+2023-02-06+095147.png" alt="" class="img1">
+                <p class="item_title">The Prayer by Andrew Letsepe</p>
+                <div>
+                    <span class="item_price">R80.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="2.jpg" alt="" class="img1">
+                <p class="item_title">MaXhosa by Randy Ngubo</p>
+                <div>
+                    <span class="item_price">R70.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="DSCF9742.jpeg" alt="" class="img1">
+                <p class="item_title">Alive by Tumelo Obi</p>
+                <div>
+                    <span class="item_price">R50.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="DSCF9693.jpeg" alt="" class="img1">
+                <p class="item_title">The People by Tokyo Ngazi</p>
+                <div>
+                    <span class="item_price">R90.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+    <section class="container content-section" id="cart_container">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total:</strong>
+            <span class="cart-total-price">R0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">CHECKOUT</button>
+    </section>
 </body>
 </html>
     </section>

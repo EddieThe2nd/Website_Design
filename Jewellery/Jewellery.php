@@ -6,65 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art</title>
     <link rel="stylesheet" href="./Jewellery.css">
+    <script src="jewellery.js"></script>
 
 </head>
 <body>
+
+    <div class="video_container">
+        <video autoplay muted loop id="myVideo">
+            <source src="4k ink drop black.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <section>
         <div class="header">
-            <h2>Jewellery<h2>
-                
+            <h2>Jewellery<h2>       
         </div>
-        <!-- <h1 class="Heading">Welcome to the World of Art Re-Imagined</h1> -->
-    <div class="img-Container">
-        <div class="first">
-            <div>
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2017-2-1024x683.jpg" alt="" class="img1">
-                <p>Come Alive by Dr Feels</p>
-            </div>
-            <div>
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2017-7-683x1024.jpg" alt="" class="img1">
-                <p>Expressions by Dr Feels</p>
-            </div>
-            <div >
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2022-2-1024x697.jpg" alt="" class="img1">
-                <p>I'm Here by Donnell</p>
-            </div>
-            <div>
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2020-13-200x200.jpg" alt="" class="img1">
-                <p>Cosy by Donnell</p>
-            </div>
-            
-        </div>
-        
-        <div class="second">
-            <div>
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2022-10-200x200.jpg" alt="" class="img1">
-                <p>MotherLand by Randy Ngubo</p>
-            </div>
-            <div>
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2017-5-1024x683.jpg" alt="" class="img1">
-                <p>MaXhosa by Randy Ngubo</p>
-            </div>
-            <div>
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2017-8-200x200.jpg" alt="" class="img1">
-                <p>Alive by Tumelo Obi</p>
-            </div>
-            <div>
-                <img src="./jewellery images/jewellery-design-and-manufacture-student-highlights-2022-6-200x200.jpg" alt="" class="img1">
-                <p>The People by Tokyo Ngazi</p>
-            </div>
-            
-        </div>
-        
-       
-        <!-- <div>
-            <img src="./Art/Screenshot+2023-02-06+095147.png" alt="" class="img1">
-            <p>The Prayer by Andrew Letsepe</p>
-        </div> -->
-        
-    </div>
-</body>
-</html>
     </section>
+    <br>
+    <br>
+
+    <section class="container content-section">
+        <div class="shop_items">
+            <div class="item">
+                <img src="./jewellery images/A.jpg" alt="" class="img1">
+                <p class="item_title">Antique Bridal Necklace</p>
+                <div class="price_button_cont">
+                    <span class="item_price">R580.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/B.jpg" alt="" class="img1">
+                <p class="item_title">Sizwe Bridal Necklace Set</p>
+                <div class="price_button_cont">
+                    <span class="item_price">R180.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/C.jpg" alt="" class="img1">
+                <p class="item_title">Buhle Bridal Necklace Set</p>
+                <div class="price_button_cont">
+                    <span class="item_price">R200.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/D.jpg" alt="" class="img1">
+                <p class="item_title">Jewelry Set Earring+Necklace</p>
+                <div>
+                    <span class="item_price">R95.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <br>
+    <br>
+    <section class="container content-section">
+        <div class="shop_items">
+            <div class="item">
+                <img src="./jewellery images/E.jpg" alt="" class="img1">
+                <p class="item_title">Ruby Leaf Necklace Set in Gold</p>
+                <div>
+                    <span class="item_price">R70.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/F.jpg" alt="" class="img1">
+                <p class="item_title">He's & Her's Gold/ Silver Rings</p>
+                <div>
+                    <span class="item_price">R420.79</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/H.jpg" alt="" class="img1">
+                <p class="item_title">Diamond Encrusted Bracelet</p>
+                <div>
+                    <span class="item_price">R1000.0</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/I.jpg" alt="" class="img1">
+                <p class="item_title">1 Gram Gold Bridal CZ Stone</p>
+                <div>
+                    <span class="item_price">R1780.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <br>
+    <br>
+    <section class="container content-section">
+        <div class="shop_items">
+            <div class="item">
+                <img src="./jewellery images/J.png" alt="" class="img1">
+                <p class="item_title">Red Diamond Earrings</p>
+                <div>
+                    <span class="item_price">R4080.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/K.png" alt="" class="img1">
+                <p class="item_title">Silver Diamond Ring</p>
+                <div>
+                    <span class="item_price">R70.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/L.png" alt="" class="img1">
+                <p class="item_title">Red Diamond Ear Piece</p>
+                <div>
+                    <span class="item_price">R50.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./jewellery images/M.jpg" alt="" class="img1">
+                <p class="item_title">Golden Diamon Flower</p>
+                <div>
+                    <span class="item_price">R90.69</span>
+                    <button class="add_button" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+        <br>
+        <br>
+        <br>
+    <section class="container content-section" id="cart_container">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total:</strong>
+            <span class="cart-total-price">R0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">CHECKOUT</button>
+    </section>
+
+
+
 </body>
 </html>

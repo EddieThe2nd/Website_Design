@@ -28,7 +28,7 @@
         <a  href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
         <div>
             <ul id="navbar">
-                <li> <a class="active" href="project.html">Home</a></li>
+                <li> <a class="active" href="HomePageUser.html">Home</a></li>
                 <li><a href="./AboutUs-Page/AboutUsPage.html">About Us</a></li>           
                 <li><a href="./Artists/ArtistPage.html">Artist</a></li>
                 <li><a href="#">Products</a>

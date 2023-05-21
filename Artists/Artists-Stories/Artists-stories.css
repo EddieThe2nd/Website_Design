@@ -1,12 +1,15 @@
 body{
     background-image: url("./coral.gif");
-    color: #F0F0F0;
+    color:white;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
+    font-weight: 900;
 }
 
 .p1{
-    margin-left: 500px;
+    margin-left: 200px;
+    margin-right: 200px;
+    
 }
 
 .H2{

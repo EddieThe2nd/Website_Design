@@ -16,3 +16,39 @@ body{
     text-align: center;
     position: relative;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.img1{
+    width: 200px;
+    height: 260px;
+    justify-content: space-around;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+    transition: 1s;
+}
+
+.img1:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.first{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: monospace;
+}
+
+.second{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: monospace;
+}
+
+

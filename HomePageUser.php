@@ -1,3 +1,17 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['username']) && isset($_SESSION['surname']) && isset($_SESSION['email'])) 
+    {
+        $user = $_SESSION['username'];
+        $Sname = $_SESSION['surname'];
+        $Email = $_SESSION['email'];
+    } else {
+        // Redirect to login page if user is not logged in
+        header('Location: login.php');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

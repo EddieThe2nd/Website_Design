@@ -1,3 +1,9 @@
+<?php
+    require('./config/server.php');
+
+    
+    // $connection->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,31 +19,31 @@
 		<form autocomplete="off">
 			<h2>Sign up</h2>
 			<div class="inputBox">
-				<input type="text" required="required">
+				<input type="text" required="required"  name="username" id="name" placeholder="" required>
 				<span>	Create Username</span>
 				<i></i>
 			</div>
 			<div class="inputBox">
-				<input type="password" required="required">
+				<input type="password" name="password" id="password" placeholder="" required>
 				<span>Create Password</span>
 				<i></i>
 			</div>
 			<div class="inputBox">
-				<input type="password" required="required">
+				<input type="password" name="C_password" id="Cpassword" placeholder="" required>
 				<span>Create Password</span>
 				<i></i>
 			</div>
             <div class="inputBox">
-				<input type="email" required="required">
+				<input type="email" name="email" id="email" placeholder="" required>
 				<span>Email</span>
 				<i></i>
 			</div>
             <div class="inputBox">
-				<input type="text" required="required">
+				<input type="text" name = "phone" placeholder ="" required>
 				<span>Phone</span>
 				<i></i>
 			</div>
-           
+        
             
 			<div class="links">
 				<a href="#">Have an account already?</a>

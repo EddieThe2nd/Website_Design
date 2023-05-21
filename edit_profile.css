@@ -1,64 +1,48 @@
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-  }
-  
-  .profile-container {
-	max-width: 600px;
-	margin: 20px auto;
-	padding: 20px;
-	border: 1px solid #ccc;
-  }
-  
-  .profile-header {
-	text-align: center;
-	margin-bottom: 20px;
-  }
-  
-  .profile-picture {
-	text-align: center;
-	margin-bottom: 20px;
-  }
-  
-  .profile-picture img {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-  }
-  
-  .profile-details {
-	margin-bottom: 20px;
-  }
-  
-  .profile-details h2 {
-	margin-bottom: 10px;
-  }
-  
-  .details-row {
-	margin-bottom: 10px;
-  }
-  
-  .details-row label {
-	font-weight: bold;
-	display: inline-block;
-	width: 120px;
-  }
-  
-  .details-row input, .details-row textarea {
-	width: 300px;
+  background-color: #f8f9fa;
+}
+
+.profile-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.profile-picture img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.details-row {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
 }
 
 .button-row {
+  margin-top: 30px;
   text-align: center;
-  margin-top: 20px;
 }
 
-.button-row button {
+#save-button {
   margin-right: 10px;
-}
-
-.error-message {
-  color: red;
-  margin-top: 10px;
 }

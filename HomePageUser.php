@@ -1,16 +1,17 @@
 <?php
-    session_start();
+        require('./config/server.php');
 
-    if(isset($_SESSION['username']) && isset($_SESSION['surname']) && isset($_SESSION['email'])) 
+    if(isset($_SESSION['username']) && isset($_SESSION['email'])) 
     {
         $user = $_SESSION['username'];
-        $Sname = $_SESSION['surname'];
+        
         $Email = $_SESSION['email'];
-    } else {
-        // Redirect to login page if user is not logged in
-        header('Location: login.php');
-        exit();
-    }
+    } 
+    // else {
+    //     // Redirect to login page if user is not logged in
+    //     header('Location: LoginPage.php');
+    //     exit();
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +34,9 @@
                 <li><a href="#">Products</a>
                     <div class="Subpg1">
                         <ul>
-                            <li><a href="./Art/Art.html">Art</a></li>
-                            <li><a href="./Fashion/Fashion.html">Fashion</a></li>
-                            <li><a href="./Jewellery/Jewellery.html">Jewellery</a></li>
+                            <li><a href="./Art/Art.php">Art</a></li>
+                            <li><a href="./Fashion/Fashion.php">Fashion</a></li>
+                            <li><a href="./Jewellery/Jewellery.php">Jewellery</a></li>
                         </ul>
                     </div>
                 
@@ -53,7 +54,7 @@
                     </div>
                     <hr>
 
-                    <a href="#" id="subMenuLink">
+                    <a href="profile.php" id="subMenuLink">
                         <img src="./FeaturedProductsImages/user.png" alt="">
                         <p id="profile"> Edit Profile</p>
                         <span>></span>

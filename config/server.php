@@ -1,9 +1,10 @@
 <?php
 session_start();
+
 $server_name = 'localhost';
 $host = 'root';
 $password_ = "";
-$db_name = 'technolab';
+$db_name = 'tera_db';
 
 $connection = mysqli_connect($server_name, $host, $password_, $db_name);
 
@@ -12,10 +13,9 @@ if(!$connection)
     die('Connection Failed: ' . mysqli_connect_error());
 }
 
-if(isset($_SESSION['username']) && isset($_SESSION['surname']) && isset($_SESSION['email'])) 
+if(isset($_SESSION['username']) &&  isset($_SESSION['email'])) 
 {
     $user = $_SESSION['username'];
-    $Sname = $_SESSION['surname'];
     $Email = $_SESSION['email'];
 }
 
@@ -26,9 +26,10 @@ if(isset($_POST['signup']))
     $email = $_POST["email"];
     $password = $_POST["password"];
     $confirmPassword = $_POST["C_password"];
+    $phone = $_POST["phone"];
 
     // Validate form fields
-    if (empty($username) || empty($surname) || empty($email) || empty($password) || empty($confirmPassword)) 
+    if (empty($username)  || empty($email) || empty($password) || empty($confirmPassword) || empty($phone)) 
     {
         echo "Invalid input or one field missing";
     } 
@@ -41,7 +42,7 @@ if(isset($_POST['signup']))
         // Encrypt password
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO `members`(`username`, `surname`, `email`, `password`) VALUES ('$username','$surname','$email','$hashedPassword')";
+        $query = "INSERT INTO `users`(`username`,  `email`, `password`, `contact_no`) VALUES ('$username','$email','$hashedPassword','$phone')";
         $Result = mysqli_query($connection,$query);
 
         if($Result === FALSE)
@@ -50,8 +51,8 @@ if(isset($_POST['signup']))
         }
         else
         {
-            echo "<script>alert('Values inserted successfully into the members table');</script>";
-            header("Location: HomePage.php");
+            echo "Data inserted successfully.";
+            header("Location: loadingpage.php");
             exit();
         }
     }

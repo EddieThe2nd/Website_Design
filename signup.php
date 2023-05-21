@@ -16,7 +16,7 @@
 <body>
 	<a  href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
     <div class="box">
-		<form autocomplete="off">
+		<form autocomplete="off" action = "loadingPage.php" method = "POST">
 			<h2>Sign up</h2>
 			<div class="inputBox">
 				<input type="text" required="required"  name="username" id="name" placeholder="" required>
@@ -47,11 +47,11 @@
             
 			<div class="links">
 				<a href="#">Have an account already?</a>
-				<a href="LoginPage.html">Login</a>
+				<a href="LoginPage.php">Login</a>
 			</div>
-			<input id="submit" type="submit" value="Sign up">
+			<input id="submit" type="submit"  name= "signup" value="Sign up">
 		</form>
 	</div>
-	<script src="signup.js"></script>
+	<!-- <script src="signup.js"></script> -->
 </body>
 </html>

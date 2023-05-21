@@ -1,3 +1,7 @@
+<?php
+require('./config/server.php')
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,38 +1,36 @@
 <?php
-session_start();
 
-$server_name = 'localhost';
-$host = 'root';
-$password_ = "";
-$db_name = 'technolab';
+require('./config/server.php');
 
-$connection = mysqli_connect($server_name, $host, $password_, $db_name);
 
-if (!$connection) {
-    die('Connection Failed: ' . mysqli_connect_error());
-}
-
-if (isset($_POST['login'])) {
+if (isset($_POST['login'])) 
+{
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $query = "SELECT * FROM members WHERE username='$username'";
+    $query = "SELECT * FROM `users` WHERE username='$username'";
     $result = mysqli_query($connection, $query);
 
-    if (mysqli_num_rows($result) == 1) {
+    if (mysqli_num_rows($result) == 1) 
+    {
         $row = mysqli_fetch_assoc($result);
         $storedPassword = $row['password'];
 
-        if (password_verify($password, $storedPassword)) {
+        if (password_verify($password, $storedPassword)) 
+        {
             $_SESSION['username'] = $row['username'];
-            $_SESSION['surname'] = $row['surname'];
-            $_SESSION['email'] = $row['email'];
-            header("Location: HomePage.php");
+            
+            // $_SESSION['email'] = $row['email'];
+            header("Location: HomePageUser.php");
             exit();
-        } else {
+        } 
+        else 
+        {
             echo "Invalid password";
         }
-    } else {
+    } 
+    else 
+    {
         echo "Invalid username";
     }
 }
@@ -53,7 +51,7 @@ if (isset($_POST['login'])) {
         <a href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
 
         <div class="box">
-            <form autocomplete="off">
+            <form  action = "HomePageUser.php" method = "POST">
                 
                 <h2>Sign in</h2>
                 <div class="inputBox">
@@ -68,13 +66,13 @@ if (isset($_POST['login'])) {
                 </div>
                 <div class="links">
                     <a href="#">Forgot Password ?</a>
-                    <a href="signup.html">Signup</a>
+                    <a href="signup.php">Signup</a>
                 </div>
-                <input id="login" type="submit" value="Login">
+                <input id="login" type="submit" name = "login" value="Login">
             </form>
         </div>
 
     </section>
-    <script src="Login.js"></script>
+    <!-- <script src="Login.js"></script> -->
 </body>
 </html>

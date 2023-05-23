@@ -14,14 +14,14 @@
         <div>
             <ul id="navbar">
                 <li> <a class="active" href="project.html">Home</a></li>
-                <li><a href="./AboutUs-Page/AboutUsPage.html">About Us</a></li>
-                <li><a href="./Artists/ArtistPage.html">Artist</a></li>
+                <li><a href="./AboutUs-Page/AboutUsPage.php">About Us</a></li>
+                <li><a href="./Artists/ArtistPage.php">Artist</a></li>
                 <li><a href="#">Products</a>
                     <div class="Subpg1">
                         <ul>
-                            <li><a href="./Art/Art.html">Art</a></li>
-                            <li><a href="./Fashion/Fashion.html">Fashion</a></li>
-                            <li><a href="./Jewellery/Jewellery.html">Jewellery</a></li>
+                            <li><a href="./Art/Art.php">Art</a></li>
+                            <li><a href="./Fashion/Fashion.php">Fashion</a></li>
+                            <li><a href="./Jewellery/jewellery.php">Jewellery</a></li>
                         </ul>
                     </div>
                 <!-- will remove this -->

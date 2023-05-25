@@ -47,9 +47,9 @@
               </h3>
           
             <ul class="social-icon">
-              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href="https://www.instagram.com/sociallubricant/"><i class="fab fa-instagram"></i></a></li>
+					    <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -72,9 +72,9 @@
               The painter synthesises elements of abstract expressionism, neo-expressionism and symbolism. </h3>
           
             <ul class="social-icon">
-              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href="https://www.instagram.com/artvilakazi/"><i class="fab fa-instagram"></i></a></li>
+					    <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -96,9 +96,9 @@
               Pimentel focuses on pushing the boundaries of contemporary portraiture by merging painting, digital illustration and drawing into a hybrid of experimentation. </h3>
            
             <ul class="social-icon">
-              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href="https://www.instagram.com/african_ginger/"><i class="fab fa-instagram"></i></a></li>
+					    <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -119,9 +119,9 @@
               Living in the city brought him closer to the realities of urban life.</h3>
            
             <ul class="social-icon">
-              <li><a href="https://www.youtube.com/"><i class="fab fa-facebook-f"></i></a></li>
-					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href="https://www.instagram.com/mncedimadolo/"><i class="fab fa-instagram"></i></a></li>
+					    <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -145,8 +145,8 @@
             
             <ul class="social-icon">
               <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+					    <li><a href="https://www.instagram.com/zacatwork/"><i class="fab fa-instagram"></i></a></li>
+					    <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -169,9 +169,9 @@
             <img class="tem-img" src="./Artists/R.jfif" alt="">  <br>
            
             <ul class="social-icon">
-              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href="https://www.instagram.com/artvilakazi/"><i class="fab fa-instagram"></i></a></li>
+					    <li><a href="https://www.facebook.com/KalashnikovvGallery/photos_of"><i class="fab fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -180,8 +180,6 @@
 
   </div>
 </div>
-
-
 
 
 </body>

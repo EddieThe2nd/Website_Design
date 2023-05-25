@@ -13,23 +13,23 @@
         <a  href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
         <div>
             <ul id="navbar">
-                <li> <a class="active" href="project.html">Home</a></li>
-                <li><a href="./AboutUs-Page/AboutUsPage.html">About Us</a></li>
-                <li><a href="./Artists/ArtistPage.html">Artist</a></li>
+                <li> <a class="active" href="project.php">Home</a></li>
+                <li><a href="./AboutUs-Page/AboutUsPage.php">About Us</a></li>
+                <li><a href="./Artists/ArtistPage.php">Artist</a></li>
                 <li><a href="#">Products</a>
                     <div class="Subpg1">
                         <ul>
-                            <li><a href="./Art/Art.html">Art</a></li>
-                            <li><a href="./Fashion/Fashion.html">Fashion</a></li>
-                            <li><a href="./Jewellery/Jewellery.html">Jewellery</a></li>
+                            <li><a href="./Art/Art.php">Art</a></li>
+                            <li><a href="./Fashion/Fashion.php">Fashion</a></li>
+                            <li><a href="./Jewellery/Jewellery.php">Jewellery</a></li>
                         </ul>
                     </div>
                 <!-- will remove this -->
                 </li>            
                 
-                <li><a href="./ContactUs/ContactUsPage.html">Contact</a></li>
+                <li><a href="./ContactUs/ContactUsPage.php">Contact</a></li>
                 <li ><a href="Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                <li><a href="LoginPage.html">Login</a></li>
+                <li><a href="LoginPage.php">Login</a></li>
             </ul>
         </div>
     </section>

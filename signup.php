@@ -14,7 +14,7 @@
 			<h2>Sign up</h2>
 			<div class="inputBox">
 				<input type="text" required="required">
-				<span>	Create Username</span>
+				<span>Create Username</span>
 				<i></i>
 			</div>
 			<div class="inputBox">

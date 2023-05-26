@@ -37,8 +37,7 @@
 				<span>Phone</span>
 				<i></i>
 			</div>
-           
-            
+
 			<div class="links">
 				<a href="#">Have an account already?</a>
 				<a href="LoginPage.html">Login</a>

@@ -1,78 +1,67 @@
 <?php
+$conn = mysqli_connect('localhost','root','','tera_db');
+session_start();
 
-require('./config/server.php');
+if(isset($_POST['submit'])){
+    $name=mysqli_real_escape_string($conn,$_POST['name']);
+    $email=mysqli_real_escape_string($conn,$_POST['email']);
+    $pass =md5($_POST['password']);
+    $cpass =md5($_POST['cpassword']);
+    $user_type =$_POST['user_type'];
 
+    $select = " SELECT * FROM `login_form` WHERE email='$email' && password ='$pass' ";
 
-if (isset($_POST['login'])) 
-{
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $result = mysqli_query($conn,$select);
 
-    $query = "SELECT * FROM `users` WHERE username='$username'";
-    $result = mysqli_query($connection, $query);
+    if(mysqli_num_rows($result)>0){
 
-    if (mysqli_num_rows($result) == 1) 
-    {
-        $row = mysqli_fetch_assoc($result);
-        $storedPassword = $row['password'];
+        $row = mysqli_fetch_array($result);
 
-        if (password_verify($password, $storedPassword)) 
-        {
-            $_SESSION['username'] = $row['username'];
-            
-            // $_SESSION['email'] = $row['email'];
-            header("Location: HomePageUser.php");
-            exit();
-        } 
-        else 
-        {
-            echo "Invalid password";
+        if($row['user_type'] == 'admin'){
+
+            $_SESSION['admin_name']=$row['name'];
+            header('location:dashboard.php');
+
+        }elseif ($row['user_type'] == 'user'){
+
+            $_SESSION['user_name']=$row['name'];
+            header('location:HomePage.php');
         }
-    } 
-    else 
-    {
-        echo "Invalid username";
+    
+    }else {
+        $error[] = 'incorrect email or password!';
     }
-}
 
+};
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./LoginPage.css">
+    <title>Login Form</title>
 
+    <link rel="stylesheet" href="CSS-Folder/style.css">
 </head>
 <body>
-    <section>
-        <a href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
-
-        <div class="box">
-            <form  action = "HomePageUser.php" method = "POST">
-                
-                <h2>Sign in</h2>
-                <div class="inputBox">
-                    <input id="username" type="text"  name = "username" id="username" placeholder = "Enter Username" required>
-                    <span>Username</span>
-                    <i></i>
-                </div>
-                <div class="inputBox">
-                    <input id="password" type="password" required="required" id="password" placeholder = "Enter Password">
-                    <span>Password</span>
-                    <i></i>
-                </div>
-                <div class="links">
-                    <a href="#">Forgot Password ?</a>
-                    <a href="signup.php">Signup</a>
-                </div>
-                <input id="login" type="submit" name = "login" value="Login">
-            </form>
-        </div>
-
-    </section>
-    <!-- <script src="Login.js"></script> -->
+    
+    <div class="form-container">
+        <form action="" method="post">
+            <h3>login now</h3>
+            <?php
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class="error-msg">'.$error.'</span>';
+                };
+            };
+            ?>
+            <input type="email" name="email" required placeholder="enter your email">
+            <input type="password" name="password" required placeholder="enter your password">
+            <input type="submit" name="submit" value="login now" class="form-btn">
+            <p>don't have an account? <a href="register_form.php">register now</a></p>
+        </form>
+    </div>
 </body>
 </html>

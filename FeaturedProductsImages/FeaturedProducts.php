@@ -46,9 +46,9 @@
       </div>
 
       <div class="product">
-        <img src="product2.jpg" alt="Product 2">
-        <div class="name">Product 2</div>
-        <div class="price">R29.99</div>
+        <img src="scalpture.webp" alt="Product 2">
+        <div class="name">Sculpture</div>
+        <div class="price">R1300</div>
         <a href="#" class="add-to-cart">Add to Cart</a>
       </div>
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion</title>
-    <link rel="stylesheet" href="./Fashion/Fashion.css">
+    <link rel="stylesheet" href="Fashion.css">
 </head>
 <body>
     <h1>Fashion Items</h1>
@@ -25,9 +25,9 @@
           </div>
 
           <div class="product">
-            <img src="FADA_2022_BlackSlipOnDress.jpg" alt="Product 2">
-            <div class="name">Slip on Dress</div>
-            <div class="price">R200</div>
+            <img src="summerFeelsJacket.jpg" alt="Product 2">
+            <div class="name">Summer Feels Unisex Jacket</div>
+            <div class="price">R450</div>
             <a href="#" class="add-to-cart">Add to Cart</a>
           </div>
 
@@ -36,13 +36,7 @@
             <div class="name">Vision Set</div>
             <div class="price">R400</div>
             <a href="#" class="add-to-cart">Add to Cart</a>
-          </div>
-
-          
-
-         
-      
-          
+          </div>  
             <div class="product">
                 <img src="FADA_2022_BlackUmbrellaDress.jpg" alt="Product 2">
                 <div class="name">Black Umbrella Dress</div>
@@ -75,8 +69,8 @@
           </div>
     
           <div class="product">
-            <img src="FADA_2022_Top.jpg" >
-            <div class="name">Black Puffed Vest</div>
+            <img src="colorBlockShirt.jpg" >
+            <div class="name">Color Block Shirt</div>
             <div class="price">R180</div>
             <a href="#" class="add-to-cart">Add to Cart</a>
           </div>

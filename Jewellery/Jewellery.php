@@ -5,142 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art</title>
-    <link rel="stylesheet" href="./Jewellery.css">
-    <script src="jewellery.js"></script>
-
+    <link rel="stylesheet" href="jewellery.css">
 </head>
 <body>
-
-    <div class="video_container">
-        <video autoplay muted loop id="myVideo">
-            <source src="4k ink drop black.mp4" type="video/mp4">
-        </video>
+    <h1>Art Pieces</h1>
+    <div class="first-row">
+        <div class="product">
+            <img src="./Jewellery images/jewellery1.jpg" >
+            <div class="name">Union Earings</div>
+            <div class="price">R150</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="./Jewellery images/jewellery2.jpg" >
+            <div class="name"> Necklace Changeables</div>
+            <div class="price">R200</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>  
+        <div class="product">
+            <img src="./Jewellery images/jewellery3.jpg" >
+            <div class="name">Speck Earings</div>
+            <div class="price">R220</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div> 
+        <div class="product">
+            <img src="./Jewellery images/jewellery4.jpg" >
+            <div class="name">Flower Studs</div>
+            <div class="price">R80</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div> 
+        <div class="product">
+            <img src="./Jewellery images/jewellery5.jpg" >
+            <div class="name">Ring Set</div>
+            <div class="price">R160</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>        
+        <div class="product">
+                <img src="./Jewellery images/jewellery6.jpg" >
+                <div class="name">Hair Pins</div>
+                <div class="price">R120</div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="./Jewellery images/jewellery7.jpg" >
+            <div class="name">Distinct Ring Set</div>
+            <div class="price">R150</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>  
+        <div class="product">
+            <img src="./Jewellery images/jewellery8.jpg" >
+            <div class="name">Black Beauty Drop Earings</div>
+            <div class="price">R300</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div> 
+        <div class="product">
+            <img src="./Jewellery images/jewellery9.jpg" >
+            <div class="name"> Ring of Art Set</div>
+            <div class="price">R90</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>  
+        <div class="product">
+            <img src="./Jewellery images/jewellery10.jpg" >
+            <div class="name">Cape Set </div>
+            <div class="price">R350</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="./Jewellery images/jewellery11.jpg" >
+            <div class="name">The Necklace</div>
+            <div class="price">R220</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="./Jewellery images/jewellery12.jpg" alt="">
+            <div class="name">Pear Drop Earings</div>
+            <div class="price">R220</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>    
+        <div class="product">
+            <img src="./Jewellery images/jewellery13.jpg" >
+            <div class="name">Pearly Pearl Earings</div>
+            <div class="price">R90</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div> 
+        <div class="product">
+            <img src="./Jewellery images/jewellery14.jpg" >
+            <div class="name">Desperado Ring set</div>
+            <div class="price">R200</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="./Jewellery images/jewellery15.jpg" >
+            <div class="name">Braceletini </div>
+            <div class="price">R2000</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="./Jewellery images/jewellery16.jpg">
+            <div class="name">Shape Neck Piece </div>
+            <div class="price">R380</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
     </div>
 
-    <section>
-        <div class="header">
-            <h2>Jewellery<h2>       
-        </div>
-    </section>
-    <br>
-    <br>
 
-    <section class="container content-section">
-        <div class="shop_items">
-            <div class="item">
-                <img src="./jewellery images/A.jpg" alt="" class="img1">
-                <p class="item_title">Antique Bridal Necklace</p>
-                <div class="price_button_cont">
-                    <span class="item_price">R580.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/B.jpg" alt="" class="img1">
-                <p class="item_title">Sizwe Bridal Necklace Set</p>
-                <div class="price_button_cont">
-                    <span class="item_price">R180.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/C.jpg" alt="" class="img1">
-                <p class="item_title">Buhle Bridal Necklace Set</p>
-                <div class="price_button_cont">
-                    <span class="item_price">R200.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/D.jpg" alt="" class="img1">
-                <p class="item_title">Jewelry Set Earring+Necklace</p>
-                <div>
-                    <span class="item_price">R95.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-    <br>
-    <br>
-    <section class="container content-section">
-        <div class="shop_items">
-            <div class="item">
-                <img src="./jewellery images/E.jpg" alt="" class="img1">
-                <p class="item_title">Ruby Leaf Necklace Set in Gold</p>
-                <div>
-                    <span class="item_price">R70.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/F.jpg" alt="" class="img1">
-                <p class="item_title">He's & Her's Gold/ Silver Rings</p>
-                <div>
-                    <span class="item_price">R420.79</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/H.jpg" alt="" class="img1">
-                <p class="item_title">Diamond Encrusted Bracelet</p>
-                <div>
-                    <span class="item_price">R1000.0</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/I.jpg" alt="" class="img1">
-                <p class="item_title">1 Gram Gold Bridal CZ Stone</p>
-                <div>
-                    <span class="item_price">R1780.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-    <br>
-    <br>
-    <section class="container content-section">
-        <div class="shop_items">
-            <div class="item">
-                <img src="./jewellery images/J.png" alt="" class="img1">
-                <p class="item_title">Red Diamond Earrings</p>
-                <div>
-                    <span class="item_price">R4080.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/K.png" alt="" class="img1">
-                <p class="item_title">Silver Diamond Ring</p>
-                <div>
-                    <span class="item_price">R70.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/L.png" alt="" class="img1">
-                <p class="item_title">Red Diamond Ear Piece</p>
-                <div>
-                    <span class="item_price">R50.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./jewellery images/M.jpg" alt="" class="img1">
-                <p class="item_title">Golden Diamon Flower</p>
-                <div>
-                    <span class="item_price">R90.69</span>
-                    <button class="add_button" type="button">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
-        <br>
-        <br>
-        <br>
+
+
+    <!-- <div class="second_row">       
+    </div>
+    <div class="third_row">
+    </div> -->
 </body>
 </html>

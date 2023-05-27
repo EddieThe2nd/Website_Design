@@ -21,7 +21,8 @@
                 <a href="./Jewellery/Jewellery.php">jewellery</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./ContactUs/ContactUsPage.php">Contact</a>
-                <a href="./SignUp.php">Sign up</a>
+                <a href="register_form.php">Sign up</a>
+                <a href="logout.php" class="btn">Logout</a>
             </div>
         </div>
     </header>

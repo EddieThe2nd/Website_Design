@@ -1,3 +1,6 @@
+<?php
+require('./config/server.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +49,6 @@
 			<input id="submit" type="submit" value="Sign up">
 		</form>
 	</div>
-	<script src="signup.js"></script>
+	<!-- <script src="signup.js"></script> -->
 </body>
 </html>

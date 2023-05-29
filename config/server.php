@@ -52,8 +52,20 @@ if(isset($_POST['signup']))
         else
         {
             echo "Data inserted successfully.";
-            header("Location: loadingpage.php");
+            header("Location: LoginPage.php");
             exit();
         }
     }
+    
+
+    // Check if the user is logged in
+    if (!isset($_SESSION['id'])) 
+    {
+        // Redirect to the login page or display an error message
+        header("Location: LoginPage.php");
+        exit;
+    }
+    
+    
+    
 }

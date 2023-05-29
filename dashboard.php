@@ -17,7 +17,7 @@
 	<div class="sidebar">
 		<h2>Dashboard</h2>
 		<ul>
-			<li><a href="#">Users</a></li>
+			<li><a href="AdminUsers.php">Users</a></li>
 			<li><a href="#">Products</a></li>
 			<li><a href="#">Orders</a></li>
 			<li><a href="#">Deliveries</a></li>

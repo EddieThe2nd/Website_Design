@@ -29,7 +29,7 @@
                 
                 <li><a href="./ContactUs/ContactUsPage.html">Contact</a></li>
                 <li ><a href="Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                <li><a href="LoginPage.html">Login</a></li>
+                <li><a href="LoginPage.php">Login</a></li>
             </ul>
         </div>
     </section>

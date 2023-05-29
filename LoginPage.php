@@ -1,38 +1,42 @@
 <?php
-
 require('./config/server.php');
 
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve the form data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if (isset($_POST['login'])) 
-{
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    // Validate the form data (you can add your own validation here)
 
-    $query = "SELECT * FROM `users` WHERE username='$username'";
-    $result = mysqli_query($connection, $query);
+    // Prepare the query to fetch the user
+    $stmt = $connection->prepare("SELECT `user_id`, `password` FROM `users` WHERE `username` = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
 
-    if (mysqli_num_rows($result) == 1) 
+    // Verify the user password
+    if ($row && password_verify($password, $row['password'])) 
     {
-        $row = mysqli_fetch_assoc($result);
-        $storedPassword = $row['password'];
+        // Start the session
+        session_start();
 
-        if (password_verify($password, $storedPassword)) 
-        {
-            $_SESSION['username'] = $row['username'];
-            
-            // $_SESSION['email'] = $row['email'];
-            header("Location: HomePageUser.php");
-            exit();
-        } 
-        else 
-        {
-            echo "Invalid password";
-        }
+        // Set the user ID in the session
+        $_SESSION['user_id'] = $row['user_id'];
+
+        // Redirect to the profile page
+        header("Location: profile.php");
+        exit;
     } 
     else 
     {
-        echo "Invalid username";
+        // Invalid email or password, redirect to the login page or display an error message
+        header("Location: LoginPage.php?error=1");
+        exit;
     }
+
+    $stmt->close();
 }
 
 ?>

@@ -38,6 +38,14 @@ $phone = $row['contact_no'];
 $bio = $row['Bio'];
 
 $stmt->close();
+
+// Retrieve the user's profile picture from the database
+$stmt = $connection->prepare("SELECT `profile_picture` FROM `users` WHERE `user_id` = ?");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$stmt->bind_result($profile_picture);
+$stmt->fetch();
+$stmt->close();
 ?>
 
 <!DOCTYPE html>
@@ -120,13 +128,28 @@ $stmt->close();
         .edit-button i {
             margin-right: 5px;
         }
+        .profile-picture {
+        max-width: 400px;
+        max-height: 400px;
+        margin-bottom: 20px;
+    }
     </style>
 </head>
 <body>
     <section>
         <div class="box">
+        <h2>Profile</h2>
+            <?php if ($profile_picture) : ?>
+                <img src="./profile_pictures/<?php echo $profile_picture; ?>" alt="Profile Picture" class="profile-picture">
+            <?php else : ?>
+                <p>No profile picture available.</p>
+            <?php endif; ?>
+            <!-- Additional profile details -->
+
             <!-- <img src="<?php echo $row['profile_picture']; ?>" alt="Profile Picture" class="profile-pic"> -->
             <h2>User Details</h2>
+
+            
             <div class="details">
                 <p><strong>Name:</strong> <?php echo $name; ?></p>
                 <p><strong>Surname:</strong> <?php echo $surname; ?></p>

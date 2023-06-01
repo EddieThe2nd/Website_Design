@@ -1,20 +1,29 @@
 <?php
-Session_start();
-        require('./config/server.php');
+    Session_start();
+    require('./config/server.php');
 
-    if(isset($_SESSION['username']) && isset($_SESSION['email'])) 
+    // Assuming the user's ID is stored in the session variable
+    // Assuming the user's ID is stored in the session variable
+    $userId = $_SESSION['user_id'];
+
+    // Fetch the user's profile picture from the database
+    $query = "SELECT `profile_picture` FROM `users` WHERE `user_id` = $userId";
+    $result = mysqli_query($connection, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) 
     {
-        $user = $_SESSION['username'];
-        
-        $Email = $_SESSION['email'];
+    $row = mysqli_fetch_assoc($result);
+    $profilePicture = $row['profile_picture'];
+    
     } 
+    else 
+    {
+    // Profile picture not found in the database, handle the error
+    $profilePicture = './profile_pictures/logo.png'; // Provide a default profile picture
+    }
+
 
     
-    // else {
-    //     // Redirect to login page if user is not logged in
-    //     header('Location: LoginPage.php');
-    //     exit();
-    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,13 +55,14 @@ Session_start();
                 </li>  
                 <li><a href="./ContactUs/ContactUsPage.php">Contact</a></li>
                 <li ><a href="Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                <li> <img src="./FeaturedProductsImages/userpic.jpg" id="user-pic" onclick="toggleMenu()"></li>  
+                <li> <img src="./profile_pictures/<?php echo $profilePicture; ?>" id="user-pic" onclick="toggleMenu()"></li>  
             </ul>
 
             <div class="subMenuWrap" id="subMenu">
                 <div class="subMenu">
                     <div class="user-info">
-                        <img src="./FeaturedProductsImages/userpic.jpg" ">
+                    <img src="./profile_pictures/<?php echo $profilePicture; ?>" id="user-pic" onclick="toggleMenu()">
+
                         <h4>Andrew Letsepe</h4>
                     </div>
                     <hr>
@@ -77,11 +87,7 @@ Session_start();
                         <p>Log Out</p>
                         <span>></span>
                     </a>
-                    <a href="profilepic.php" id="subMenuLink">
-                    <img src="./FeaturedProductsImages/change-picture.png" alt="">
-                    <p>Change Profile Picture</p>
-                    <span>></span>
-                </a>
+                    
                 </div>
                 
                 

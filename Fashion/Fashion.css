@@ -37,6 +37,7 @@ img{
 .product img {
   width: 100%;
   border-radius: 10px;
+  transition: transform 0.5s ease; /* Add transition property for smooth animation */
 }
 
 .product img:hover {

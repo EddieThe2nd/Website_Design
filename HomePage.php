@@ -22,7 +22,7 @@
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./ContactUs/ContactUsPage.php">Contact</a>
                 <a href="register_form.php">Sign up</a>
-                <a href="logout.php" class="btn">Logout</a>
+                <a href="logout.php" class="btn">Login</a>
             </div>
         </div>
     </header>
@@ -183,43 +183,56 @@
 
 
     <script type="text/javascript">
-        //script for responsive navigation menu
-        const menuBtn = document.querySelector(".menu-btn");
-        const navigation= document.querySelector(".navigation");
+    // script for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
 
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
 
-        menuBtn.addEventListener("click",()=>{
-            menuBtn.classList.toggle("active");
-            navigation.classList.toggle("active");
+    // script for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    let currentSlide = 0;
+
+    function slideNav(manual) {
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
         });
 
-        //script for video slider navigation
-        const btns = document.querySelectorAll(".nav-btn");
-        const slides= document.querySelectorAll(".video-slide");
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
 
-        var slideNav = function(manual){
-            btns.forEach((btn)=>{
-                btn.classList.remove("active");
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        currentSlide = manual;
+    }
 
-            });
-
-            slides.forEach((slide)=>{
-                slide.classList.remove("active")
-            })
-
-
-            btns[manual].classList.add("active");
-            slides[manual].classList.add("active");
-
+    function autoSlide() {
+        currentSlide++;
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
         }
-        btns.forEach((btn,i)=>{
-            btn.addEventListener("click",() =>{
-                slideNav(i);
-            });
+        slideNav(currentSlide);
+    }
+
+    window.onload = function () {
+        setTimeout(function () {
+            slideNav(0); // Set initial slide
+            setInterval(autoSlide, 4000); // Start the interval
+        }, 1000); // Delay start by 1 second
+    };
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            slideNav(i);
         });
+    });
+</script>
 
 
-
-    </script>
 </body>
 </html>

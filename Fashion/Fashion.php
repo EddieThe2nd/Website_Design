@@ -26,7 +26,7 @@
 
           <div class="product">
             <img src="summerFeelsJacket.jpg" alt="Product 2">
-            <div class="name">Summer Feels Unisex Jacket</div>
+            <div class="name">Summer Unisex Jacket</div>
             <div class="price">R450</div>
             <a href="#" class="add-to-cart">Add to Cart</a>
           </div>
@@ -37,12 +37,12 @@
             <div class="price">R400</div>
             <a href="#" class="add-to-cart">Add to Cart</a>
           </div>  
-            <div class="product">
-                <img src="FADA_2022_BlackUmbrellaDress.jpg" alt="Product 2">
-                <div class="name">Black Umbrella Dress</div>
-                <div class="price">R289</div>
-                <a href="#" class="add-to-cart">Add to Cart</a>
-              </div>
+          <div class="product">
+            <img src="FADA_2022_BlackUmbrellaDress.jpg" alt="Product 2">
+            <div class="name">Black Umbrella Dress</div>
+            <div class="price">R289</div>
+            <a href="#" class="add-to-cart">Add to Cart</a>
+          </div>
 
     </div>
 

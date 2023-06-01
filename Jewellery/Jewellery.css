@@ -5,10 +5,12 @@
     
 }
 h1{
-    color: rgb(61, 61, 130);
+    color:navajowhite;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    background-color: rgba(33, 103, 233, 0.199);
+    padding: 10px;
 }
 body {
     font-family: Arial, sans-serif;
@@ -29,6 +31,7 @@ body {
     border-radius: 10px;
     margin-bottom: 60px;
     margin-top: 60px;
+    background-color: rgba(255, 255, 255, 0.404);
 
 }
 img{
@@ -42,7 +45,8 @@ img{
 }
 
 .product img:hover {
-    transform: scale(1.5); /* Zoom in slightly on hover */
+    transition:1s;
+    transform: scale(1.1); /* Zoom in slightly on hover */
 }
 
 .product .name {
@@ -51,16 +55,17 @@ img{
 }
 .product .price {
     font-weight: bold;
-    color: whitesmoke;
+    color: rgb(170, 165, 165);
 }
 
 .product .add-to-cart {
     display: inline-block;
     padding: 5px 10px;
-    background-color: rgb(216, 215, 215);
+    background-color: rgb(59, 163, 211);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    border-color: white;
 }
 .third_row{
     margin-left: 90px;
@@ -74,5 +79,5 @@ img{
 
 }
 .name{
-    color:navajowhite;
+    color:rgb(83, 83, 83);
 }

@@ -5,10 +5,12 @@
   
 }
 h1{
-  color: #15406e;
+  color:navajowhite;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  background-color: rgba(33, 103, 233, 0.199);
+  padding: 10px;
 }
 body {
   font-family: Arial, sans-serif;
@@ -27,6 +29,8 @@ body {
   margin-left: 65px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.404);
+
 
 }
 img{
@@ -51,13 +55,13 @@ img{
 
 .product .price {
   font-weight: bold;
-  color: green;
+  color: rgb(170, 165, 165);
 }
 
 .product .add-to-cart {
   display: inline-block;
   padding: 5px 10px;
-  background-color: rgb(216, 215, 215);
+  background-color: rgb(59, 163, 211);
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -72,4 +76,7 @@ img{
 .first-row{
   margin-left: 90px;
 
+}
+.name{
+  color:rgb(83, 83, 83);
 }

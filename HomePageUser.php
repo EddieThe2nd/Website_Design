@@ -105,8 +105,31 @@
 
     </section>
 
+    <br>
     
     <section id="product1" class="section-p1">
+
+    <div class="explore" data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid" style="position: relative; left: -59.875px; box-sizing: border-box; width: 1038px; padding-left: 59.875px; padding-right: 60.287px;">
+        <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="wpb_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <h3>View our State of the Art Facilities here</h3>
+                        </div>
+                    </div>
+                    <div class="wpb_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <p>
+                                <iframe title="FADA Virtual Tour" src="https://360pro.co.za/university_of_johannesburg/FADA/FADA-VT/" height="800px"></iframe>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <h2>Featured Products</h2>
         <p>Inovative UJ products from multiple disciplines</p>
         <div class="pro-container"> 
@@ -176,48 +199,7 @@
         </div>
     </section>
 
-    <footer class="section-p1">
-        <div class="col">
-            <img style="width: 130px; height: 140px;" id="footer-Logo" src="./Images/Design Eclat-TransparentBlueTree.png" alt="">
-            <h4>Contact</h4>
-            <p><strong>Address:</strong> Faculty of Art, Design and Architecture, Cottesloe, Johannesburg, 2092</p>
-            <p><strong>Phone:</strong> +27 11 559 4555</p>
-            <p><strong>Hours:</strong>09am-4pm, Mon - Fri</p>
-            </div>
-
-        </div>
-
-        <div class="col">
-            <h4>About</h4>
-            <a href="#">About Us</a>
-            <a href="#">Delivery Information</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Contact Us</a>
-
-
-        </div>
-
-        <div class="col">
-            <h4>My Account</h4>
-            <a href="#">View Cart</a>
-            <a href="#">Track My Order</a>
-            <a href="#">Help</a>
-
-
-        </div>
-
-        <div class="col payment">
-            <p>Secure Payment Gateways</p>
-            <img src="Images/secure pg.png" alt="">   
-        </div>
-
-        <div class="copyright">
-            <p>© 2023 UJ-Design, All Rights Reserved</p>
-        </div>
-
-    </footer>
-
+    <?php include "footer.php"?>
 
     <script src="./project.js " ></script>
     <script src="HomePageUser.Js"></script>

@@ -150,6 +150,13 @@ p{
 } */
 #product1{
     text-align:center ;
+    align-content: center;
+
+}
+#product1 .explore{
+    align-content: center;
+    margin-left: 15%;
+
 }
 #product1 .pro-container{
     display: flex;
@@ -502,4 +509,7 @@ iframe{
     /* margin-left: 10%;
     margin-right: 10%; */
 
+}
+.explore{
+    align-content: center;
 }

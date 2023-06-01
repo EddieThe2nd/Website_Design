@@ -1,79 +1,62 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+body {
+  margin: 0;
+  padding: 0;
 
-}
-body{
-    background-image: url(./Images/white\ bubbles.jpg);
-}
-.heading{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 20px auto;
-}
-.heading h1{
-    font-size: 50px;
-    color:#00425A ;
-    margin-bottom: 25px;
-    position: relative;
-}
-.heading h1::after{
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    display: block;
-    margin:  0 auto;
-    background-color:gray;
-}
-.heading p{
-    font-size: 18px;
-    color: #00425A;
-    margin-bottom: 35px;
-}
-.container{
-    width:90%;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-.about{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.about-image{
-    flex: 1;
-    margin: 40px;
-    overflow: hidden;
-}
-.about-image{
-    max-width: 100%;
-    height:auto ;
-    transform: 0,5s ease;
+  
 }
 
-.about-image:hover{   
-    transform: scale(1.1);
+.container {
+  background-image: url(./featuredBackgr.gif);
+  background-repeat: no-repeat;
+  background-size: cover; /* Zoom out background image */
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px; /* Add rounded corners */
+  background-color: #f2f2f2;
+  image-rendering: auto; /* Enhance background image quality */
 }
-.about-content{
-    flex:1;
 
+h1 {
+  color:rgb(8, 8, 84);
+  font-size: 70px;
 }
-.about-content h2{
-    font-size: 23px;
-    margin-bottom: 15px;
-    color: #465b52;
 
+.center {
+  text-align: center;
 }
-.about-content p{
-    font-size: 10px;
-    line-height: 1.5;
-    color: #00425A;
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.flex-item {
+  background-image: url(./aboutUsBackground1.jpg);
+  image-rendering: auto; /* Enhance background image quality */
+  flex-basis: calc(33.33% - 20px);
+  padding: 20px;
+  background-color: rgb(123, 123, 125);
+  border-radius: 30px;
+  margin-right: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.flex-item:hover {
+  background-color: #ddd;
+  transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+h2 {
+  color:rgb(8, 8, 84) ;
+}
+
+p {
+  color:rgb(8, 8, 84);
+  font-size: 17px;
 }

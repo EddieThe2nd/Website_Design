@@ -1,4 +1,5 @@
 <?php
+Session_start();
         require('./config/server.php');
 
     if(isset($_SESSION['username']) && isset($_SESSION['email'])) 
@@ -7,6 +8,8 @@
         
         $Email = $_SESSION['email'];
     } 
+
+    
     // else {
     //     // Redirect to login page if user is not logged in
     //     header('Location: LoginPage.php');
@@ -28,9 +31,9 @@
         <a  href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
         <div>
             <ul id="navbar">
-                <li> <a class="active" href="HomePageUser.html">Home</a></li>
-                <li><a href="./AboutUs-Page/AboutUsPage.html">About Us</a></li>           
-                <li><a href="./Artists/ArtistPage.html">Artist</a></li>
+                <li> <a class="active" href="HomePageUser.php">Home</a></li>
+                <li><a href="./AboutUs-Page/AboutUsPage.php">About Us</a></li>           
+                <li><a href="./Artists/ArtistPage.php">Artist</a></li>
                 <li><a href="#">Products</a>
                     <div class="Subpg1">
                         <ul>
@@ -41,7 +44,7 @@
                     </div>
                 
                 </li>  
-                <li><a href="./ContactUs/ContactUsPage.html">Contact</a></li>
+                <li><a href="./ContactUs/ContactUsPage.php">Contact</a></li>
                 <li ><a href="Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
                 <li> <img src="./FeaturedProductsImages/userpic.jpg" id="user-pic" onclick="toggleMenu()"></li>  
             </ul>
@@ -69,11 +72,16 @@
                         <p>Help & support</p>
                         <span>></span>
                     </a>
-                    <a href="#" id="subMenuLink">
+                    <a href="logout.php" id="subMenuLink">
                         <img src="./FeaturedProductsImages/logout.png" alt="">
                         <p>Log Out</p>
                         <span>></span>
                     </a>
+                    <a href="profilepic.php" id="subMenuLink">
+                    <img src="./FeaturedProductsImages/change-picture.png" alt="">
+                    <p>Change Profile Picture</p>
+                    <span>></span>
+                </a>
                 </div>
                 
                 

@@ -11,7 +11,6 @@
 <body>
     <section>
         <div class="header">
-<<<<<<< HEAD:Fashion/Fashion.html
             <h2>Fashion<h2>
         </div>
         <div class="img-Container">
@@ -58,9 +57,6 @@
            
           
             
-=======
-            <h2>Cart<h2>
->>>>>>> 47736dfbfba9613114e8b4674886ae70861be5d0:Cart.php
         </div>
     </section>
 </body>

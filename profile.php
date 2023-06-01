@@ -1,4 +1,5 @@
 <?php
+Session_start();
 require('./config/server.php');
 
 // Check if the user is logged in
@@ -10,7 +11,7 @@ require('./config/server.php');
 // }
 
 // Retrieve the user ID from the session
-$user_id = 6;
+$user_id =  $_SESSION['user_id'];
 
 // Retrieve the user details from the database
 $stmt = $connection->prepare("SELECT * FROM `users` WHERE `user_id`=?");
@@ -46,13 +47,85 @@ $stmt->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Details</title>
-    <link rel="stylesheet" href="./display.css">
+    <link rel="stylesheet" href="profile.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .back-button i {
+            margin-right: 5px;
+        }
+
+        .edit-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .edit-button:hover {
+            background-color: #555;
+        }
+
+        .edit-button i {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
     <section>
-        
-
         <div class="box">
+            <!-- <img src="<?php echo $row['profile_picture']; ?>" alt="Profile Picture" class="profile-pic"> -->
             <h2>User Details</h2>
             <div class="details">
                 <p><strong>Name:</strong> <?php echo $name; ?></p>
@@ -64,7 +137,8 @@ $stmt->close();
                 <p><strong>Phone Number:</strong> <?php echo $phone; ?></p>
                 <p><strong>Bio:</strong> <?php echo $bio; ?></p>
             </div>
-            <a href="edit_profile.php">Edit Profile</a>
+            <a href="HomePageUser.php" class="back-button"><i class="fa fa-arrow-left"></i> Back</a>
+            <a href="edit_profile.php" class="edit-button"><i class="fa fa-edit"></i> Edit</a>
         </div>
     </section>
 </body>

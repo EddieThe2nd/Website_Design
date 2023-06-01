@@ -352,30 +352,45 @@ video:hover {
 {
     width: 20px;
 }
-
 #header #navbar li:hover .Subpg1 {
-
     display: block;
     position: absolute;
-    /* background: #89737300; */
-    background: transparent;
+    background: #fff;
     margin-top: 15px;
-    margin-left: -15px;
+    margin-left: 0;
+    width: auto;
+    min-width: 200px;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
-.Subpg1 ul li:hover .Subpg1 ul li{
+.Subpg1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    width: 150px;
+.Subpg1 ul li {
     padding: 10px;
-    border-bottom: 1px dotted;
-    background: transparent; 
-    border-radius: 0;
-    text-align: left;}
+    border-bottom: 1px dotted #ccc;
+    text-align: left;
+}
+
+.Subpg1 ul li:last-child {
+    border-bottom: none;
+}
+
+.Subpg1 ul li a {
+    text-decoration: none;
+    color: #465b52;
+}
+
+.Subpg1 ul li:hover {
+    background-color: #f5f5f5;
+}
 
 
-    .Subpg1{
-        display: none;
-    }
 
 
 /* start media query */

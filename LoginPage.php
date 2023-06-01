@@ -1,82 +1,77 @@
 <?php
+Session_start();
 require('./config/server.php');
 
-// Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve the form data
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if (isset($_POST['login'])) 
+{
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    // Validate the form data (you can add your own validation here)
+    $query = "SELECT * FROM `users` WHERE username='$username'";
+    $result = mysqli_query($connection, $query);
 
-    // Prepare the query to fetch the user
-    $stmt = $connection->prepare("SELECT `user_id`, `password` FROM `users` WHERE `username` = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-
-    // Verify the user password
-    if ($row && password_verify($password, $row['password'])) 
+    if (mysqli_num_rows($result) == 1) 
     {
-        // Start the session
-        session_start();
+        $row = mysqli_fetch_assoc($result);
+        $storedPassword = $row['password'];
+        $storedId = $row['user_id'];
 
-        // Set the user ID in the session
-        $_SESSION['user_id'] = $row['user_id'];
+        $_SESSION['user_id'] = $storedId;
+        
 
-        // Redirect to the profile page
-        header("Location: profile.php");
-        exit;
+        if (password_verify($password, $storedPassword)) 
+        {
+            $_SESSION['username'] = $row['username'];
+            
+            // $_SESSION['email'] = $row['email'];
+            header("Location: loadingpage.php");
+            exit();
+        } 
+        else 
+        {
+            echo "Invalid password";
+        }
     } 
+    else if($username === 'Admin' && $password === 'Admin')
+    {
+        header("Location: dashboard.php");
+        exit();
+    }
     else 
     {
-        // Invalid email or password, redirect to the login page or display an error message
-        header("Location: LoginPage.php?error=1");
-        exit;
+        echo "Invalid username";
     }
-
-    $stmt->close();
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./LoginPage.css">
+    <title>Login Form</title>
 
+    <link rel="stylesheet" href="CSS-Folder/style.css">
 </head>
 <body>
-    <section>
-        <a href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
-
-        <div class="box">
-            <form  action = "HomePageUser.php" method = "POST">
-                
-                <h2>Sign in</h2>
-                <div class="inputBox">
-                    <input id="username" type="text"  name = "username" id="username" placeholder = "Enter Username" required>
-                    <span>Username</span>
-                    <i></i>
-                </div>
-                <div class="inputBox">
-                    <input id="password" type="password" required="required" id="password" placeholder = "Enter Password">
-                    <span>Password</span>
-                    <i></i>
-                </div>
-                <div class="links">
-                    <a href="#">Forgot Password ?</a>
-                    <a href="signup.php">Signup</a>
-                </div>
-                <input id="login" type="submit" name = "login" value="Login">
-            </form>
-        </div>
-
-    </section>
-    <!-- <script src="Login.js"></script> -->
+    
+    <div class="form-container">
+        <form action="" method="post">
+            <h3>login now</h3>
+            <?php
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class="error-msg">'.$error.'</span>';
+                };
+            };
+            ?>
+            <input type="text" name="username" required placeholder="enter your username">
+            <input type="password" name="password" required placeholder="enter your password">
+            <input type="submit" name="login" value="login now" class="form-btn">
+            <p>don't have an account? <a href="register_form.php">register now</a></p>
+        </form>
+    </div>
 </body>
 </html>

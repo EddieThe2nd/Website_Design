@@ -1,3 +1,11 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','tera_db');
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +30,7 @@
 			<li><a href="#">Orders</a></li>
 			<li><a href="#">Deliveries</a></li>
 			<li><a href="#">Settings</a></li>
+			<li><a href="logout.php" class="btn">Logout</a></li>
 		</ul>
 	</div>
 	<div class="main-content">

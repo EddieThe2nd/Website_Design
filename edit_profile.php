@@ -1,40 +1,29 @@
 <?php
+session_start();
 require('./config/server.php');
 
 // Check if the user is logged in
-// session_start();
-// if (!isset($_SESSION['user_id'])) {
-//     // Redirect to the login page or display an error message
-//     header("Location: login.php");
-//     exit;
-// }
-
-// Retrieve the user ID from the session
-$user_id = 6;
+$user_id = $_SESSION['user_id'];
 
 // Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Check if the save button is clicked
-    if (isset($_POST['save-button'])) {
-        // Retrieve the form data
-        $name = $_POST['name'];
-        $surname = $_POST['surname'];
-        $age = $_POST['age'];
-        $gender = $_POST['gender'];
-        $idNumber = $_POST['idNumber'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $bio = $_POST['bio'];
+if (isset($_POST['save-button'])) {
+    // Retrieve the form data
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $age = $_POST['age'];
+    $gender = $_POST['gender'];
+    $idNumber = $_POST['idNumber'];
+    $phone = $_POST['phone'];
+    $bio = $_POST['bio'];
 
-        // Prepare and execute the query to update the user details
-        $stmt = $connection->prepare("UPDATE `users` SET `first_name`=?, `last_name`=?, `age`=?, `gender`=?, `Id_number`=?, `email`=?, `contact_no`=?, `Bio`=? WHERE `user_id`=?");
-        $stmt->bind_param("ssississs", $name, $surname, $age, $gender, $idNumber, $email, $phone, $bio, $user_id);
-        $stmt->execute();
+    // Prepare and execute the query to update the user details
+    $stmt = $connection->prepare("UPDATE `users` SET `first_name`=?, `last_name`=?, `age`=?, `gender`=?, `Id_number`=?, `contact_no`=?, `Bio`=? WHERE `user_id`=?");
+    $stmt->bind_param("ssississ", $name, $surname, $age, $gender, $idNumber, $phone, $bio, $user_id);
+    $stmt->execute();
 
-        // Redirect to the display page
-        header("Location: profile.php");
-        exit;
-    }
+    // Redirect to the display page
+    header("Location: profile.php");
+    exit;
 }
 
 // Retrieve the user details from the database
@@ -57,7 +46,6 @@ $surname = $row['last_name'];
 $age = $row['age'];
 $gender = $row['gender'];
 $idNumber = $row['Id_number'];
-$email = $row['email'];
 $phone = $row['contact_no'];
 $bio = $row['Bio'];
 
@@ -97,10 +85,6 @@ $stmt->close();
             <div class="mb-3">
                 <label for="idNumber" class="form-label">ID Number</label><br>
                 <input type="text" class="form-control" id="idNumber" name="idNumber" value="<?php echo $idNumber; ?>" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label><br>
-                <input type="email" class="form-control" id="email" name="email" value="<?php echo $email; ?>" required>
             </div>
             <div class="mb-3">
                 <label for="phone" class="form-label">Contact Number</label><br>

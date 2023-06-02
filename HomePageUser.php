@@ -1,134 +1,69 @@
-<?php
-    Session_start();
-    require('./config/server.php');
-
-    // Assuming the user's ID is stored in the session variable
-    // Assuming the user's ID is stored in the session variable
-    $userId = $_SESSION['user_id'];
-
-    // Fetch the user's profile picture from the database
-    $query = "SELECT `profile_picture` FROM `users` WHERE `user_id` = $userId";
-    $result = mysqli_query($connection, $query);
-
-    if ($result && mysqli_num_rows($result) > 0) 
-    {
-    $row = mysqli_fetch_assoc($result);
-    $profilePicture = $row['profile_picture'];
-    
-    } 
-    else 
-    {
-    // Profile picture not found in the database, handle the error
-    $profilePicture = './profile_pictures/logo.png'; // Provide a default profile picture
-    }
-
-
-    
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UJ-DesignEclat</title>
-    <link rel="stylesheet" href="HomePageUser.css">
-    
+    <title>Document</title>
+    <link rel="stylesheet" href="./homePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section id="header">
-        <a  href="#"><img id="Logo-header" src="./Images/Design Eclat-TransparentBlueTree.png" alt=""></a>
-        <div>
-            <ul id="navbar">
-                <li> <a class="active" href="HomePageUser.php">Home</a></li>
-                <li><a href="./AboutUs-Page/AboutUsPage.php">About Us</a></li>           
-                <li><a href="./Artists/ArtistPage.php">Artist</a></li>
-                <li><a href="#">Products</a>
-                    <div class="Subpg1">
-                        <ul>
-                            <li><a href="./Art/Art.php">Art</a></li>
-                            <li><a href="./Fashion/Fashion.php">Fashion</a></li>
-                            <li><a href="./Jewellery/Jewellery.php">Jewellery</a></li>
-                        </ul>
-                    </div>
-                
-                </li>  
-                <li><a href="./ContactUs/ContactUsPage.php">Contact</a></li>
-                <li ><a href="Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                <li> <img src="./profile_pictures/<?php echo $profilePicture; ?>" id="user-pic" onclick="toggleMenu()"></li>  
-            </ul>
 
-            <div class="subMenuWrap" id="subMenu">
-                <div class="subMenu">
-                    <div class="user-info">
-                    <img src="./profile_pictures/<?php echo $profilePicture; ?>" id="user-pic" onclick="toggleMenu()">
-
-                        <h4>Andrew Letsepe</h4>
-                    </div>
-                    <hr>
-
-                    <a href="profile.php" id="subMenuLink">
-                        <img src="./FeaturedProductsImages/user.png" alt="">
-                        <p id="profile"> Edit Profile</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" id="subMenuLink">
-                        <img src="./FeaturedProductsImages/settings.png" alt="">
-                        <p>Settings & Privacy</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" id="subMenuLink">
-                        <img src="./FeaturedProductsImages/help-web-button.png" alt="">
-                        <p>Help & support</p>
-                        <span>></span>
-                    </a>
-                    <a href="logout.php" id="subMenuLink">
-                        <img src="./FeaturedProductsImages/logout.png" alt="">
-                        <p>Log Out</p>
-                        <span>></span>
-                    </a>
-                    
-                </div>
-                
-                
+    <header id="header">
+        <a  href="#"><img id="Logo-header" src="./DesignEclatlogo1.png" alt=""></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="./AboutUs-Page/AboutUsPage.php">About</a>
+                <a href="./Art/Art.php">Art</a>
+                <a href="./Fashion/Fashion.php">Fashion</a>
+                <a href="./Jewellery/Jewellery.php">jewellery</a>
+                <a href="./Artists/ArtistPage.php">Artists</a>
+                <a href="./ContactUs">Contact</a>
+                <a href="logout.php" class="btn">Logout</a>
             </div>
         </div>
+    </header>
+    <section class="home">
         
-    </section>
-
-    <section id="hero">
-        <h2>F A D A: Designing The Future!</h2><br> <br>
-        <h2>High Class UJ Creations to The World</h2> <br>
-        <p>Art, Fashion and Jewellery Offerings that will transform your world</p> 
-        <button id="shop">Shop Now</button>
-        <video controls autoplay muted loop src="./UJ End of Year Exhibition.mp4" width="600"></video>
-
-    </section>
-
-    <br>
-    
-    <section id="product1" class="section-p1">
-
-    <div class="explore" data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid" style="position: relative; left: -59.875px; box-sizing: border-box; width: 1038px; padding-left: 59.875px; padding-right: 60.287px;">
-        <div class="wpb_column vc_column_container vc_col-sm-12">
-            <div class="vc_column-inner">
-                <div class="wpb_wrapper">
-                    <div class="wpb_text_column wpb_content_element ">
-                        <div class="wpb_wrapper">
-                            <h3>View our State of the Art Facilities here</h3>
-                        </div>
-                    </div>
-                    <div class="wpb_text_column wpb_content_element ">
-                        <div class="wpb_wrapper">
-                            <p>
-                                <iframe title="FADA Virtual Tour" src="https://360pro.co.za/university_of_johannesburg/FADA/FADA-VT/" height="800px"></iframe>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <video class="video-slide" src="./Landing page animation/fashionslider3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./Landing page animation/Slider2FashionShow.mp4"  autoplay muted loop></video>
+        <video class="video-slide" src="./Landing page animation/Slider1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./Landing page animation/jewelleryslider2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./Landing page animation/artabstractSlider1.mp4" autoplay muted loop></video>
+        <div class="content">
+            <h1>Designing the future!<br> <span>UJ Creations to The World.</span> </h1>
+            <p>Fashion,Art and jewellery design the UJ way that enables empowering transformation through visual expression.</p>
+            <button class="fada-button"><a href="AboutUs-Page/AboutUsPage.php" >Read More</a></button>
+   
         </div>
-    </div>
+        <div class="media-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>             
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <section class="exhibition">
+        <h2 class="header">End of Year Exhibition</h2>
+
+        <video controls autoplay muted loop src="./Landing page animation/UJ End of Year Exhibition.mp4" width="650"></video>
+
+    
+    <div class="text">
+        <p class="textP">Join us at the exciting end of year exhibition to showcase creative projects and arts embodied by FADA.</p>
+
+        <button class="exhibition-button"><a href="https://web.uj.ac.za/fada-exhibition/" target="_blank">Read More</a></button>
+    </section>   
+    <!-- featured products section -->
+    <section id="product1" class="section-p1">
 
         <h2>Featured Products</h2>
         <p>Inovative UJ products from multiple disciplines</p>
@@ -147,8 +82,7 @@
                     </div>
                     <h4>R150</h4>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart" ></i></a>
-
+                <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
             </div>
             <div class="pro">
                 <img src="FeaturedProductsImages/TERA-03 sports shoe.png" alt="">
@@ -164,7 +98,7 @@
                     </div>
                     <h4>R800</h4>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart" ></i></a>
+                <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
 
             </div>
             <div class="pro">
@@ -181,14 +115,18 @@
                     </div>
                     <h4>R400</h4>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart" ></i></a>
-
-            </div>
+                <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
+                </div>
 
         </div>
+        <button id="featured-button"><a href="./FeaturedProductsImages/FeaturedProducts.php">See More</a></button>
 
     </section>
+
+    <!-- newsletter and footer sections -->
+
     <section id="newsletter" class="section-p1">
+
         <div class="newstext">
             <h4>Sign up for Newsletter</h4>
             <p>Get E-mail updates about our latest projects and <span> special offers.</span></p>
@@ -201,7 +139,59 @@
 
     <?php include "footer.php"?>
 
-    <script src="./project.js " ></script>
-    <script src="HomePageUser.Js"></script>
+
+
+    <script type="text/javascript">
+    // script for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+    // script for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    let currentSlide = 0;
+
+    function slideNav(manual) {
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        currentSlide = manual;
+    }
+
+    function autoSlide() {
+        currentSlide++;
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+        slideNav(currentSlide);
+    }
+
+    window.onload = function () {
+        setTimeout(function () {
+            slideNav(0); // Set initial slide
+            setInterval(autoSlide, 4000); // Start the interval
+        }, 1000); // Delay start by 1 second
+    };
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            slideNav(i);
+        });
+    });
+</script>
+
+
 </body>
 </html>

@@ -20,9 +20,9 @@
                 <a href="./Fashion/Fashion.php">Fashion</a>
                 <a href="./Jewellery/Jewellery.php">jewellery</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
-                <a href="./ContactUs/ContactUsPage.php">Contact</a>
+                <a href="./ContactUs">Contact</a>
                 <a href="register_form.php">Sign up</a>
-                <a href="logout.php" class="btn">Login</a>
+               
             </div>
         </div>
     </header>

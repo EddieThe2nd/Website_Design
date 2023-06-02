@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,7 @@
                 <a href="./Jewellery/Jewellery.php">jewellery</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./ContactUs">Contact</a>
-                <a href="logout.php" class="btn">Logout</a>
+                <!-- <a href="logout.php" class="btn">Logout</a> -->
             </div>
         </div>
     </header>

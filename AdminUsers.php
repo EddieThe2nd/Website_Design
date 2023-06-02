@@ -26,7 +26,7 @@ $result = mysqli_query($connection, $sql);
 		<h2>Dashboard</h2>
 		<ul>
 			<li><a href="#">Users</a></li>
-			<li><a href="#">Products</a></li>
+			<li><a href="product_form.php">Products</a></li>
 			<li><a href="#">Orders</a></li>
 			<li><a href="#">Deliveries</a></li>
 			<li><a href="#">Settings</a></li>

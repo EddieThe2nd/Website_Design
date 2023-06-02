@@ -35,7 +35,8 @@ if(isset($_POST['add_to_cart'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewellery Page</title>
+    <title>Art Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="Art.css">
 </head>
 
@@ -68,7 +69,7 @@ if(isset($_POST['add_to_cart'])){
     <?php foreach ($products as $product): ?>
         <div class="product">
             <h2><?php echo $product['name']; ?></h2>
-            <p class="price"><?php echo $product['price']; ?></p>
+            <p class="price">R<?php echo $product['price']; ?></p>
             <img src="image/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" width="200">
             <form action="" method="post">
                 <input type="hidden" name="name" value="<?php echo $product['name']; ?>">

@@ -37,6 +37,9 @@ if(isset($_POST['add_to_cart'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewellery Page</title>
     <link rel="stylesheet" href="jewellery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 </head>
 <body>
 <header id="header">
@@ -49,7 +52,8 @@ if(isset($_POST['add_to_cart'])){
                 <a href="./art.php">Art</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./ContactUs">Contact</a>
-                <a href="cart.php" class="cart"><i class='fas fa-shopping-cart'></i><span><?php echo $row_count; ?></span></a>
+                <a href="cart.php" class="cart"><i class="fas fa-shopping-cart"></i><span><?php echo $row_count; ?></span></a>
+
                
             </div>
         </div>

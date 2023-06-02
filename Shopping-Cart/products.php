@@ -64,7 +64,7 @@ if(isset($_POST['add_to_cart'])){
                     <input type="hidden" name="name" value="<?php echo $fetch_products['name']; ?>">
                     <input type="hidden" name="price" value="<?php echo $fetch_products['price']; ?>">
                     <input type="hidden" name="image" value="<?php echo $fetch_products['image']; ?>">
-                    <input type="submit" name="add_to_cart" value="add to cart" class="btn">
+                    <!-- <input type="submit" name="add_to_cart" value="add to cart" class="btn"> -->
                 </div>
             </form>
                

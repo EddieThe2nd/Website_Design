@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>phpEmail</title>
+  <!-- used@rcss_framework for links below  and all html form n css under documentation-->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rizalcss@2.1.0/css/cdn.rizal.css" integrity="sha256-pqCXaySV+OMUcpVQ0FeFtvz9VLMeI08z53Ar2a7QP5o=" crossorigin="anonymous"> -->
+  <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script defer src="https://kit.fontawesome.com/1e8d61f212.js"></script>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-image: url(./backgroundcontact.jpg);
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      image-rendering: optimizeQuality;
+    }
+      form {
+        margin-top: 50px;
+        line-height: 70px;
+        position: relative;
+        left: 900px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+    }
+    input{
+      border: 1px solid black;
+      border-radius:5px;
+      padding: 15px;
+      width: 400px;
+      background-color:rgb(230, 230, 230);
+      color: black;
+      font-weight: 1900px;
+      font-size: large;
+
+
+    }
+    textarea{
+      width: 220px;
+      height: 20px;
+      border: 1px solid black;
+      border-radius:5px;
+      padding: 104px;
+      background-color:rgb(230, 230, 230);
+      color: black;
+      font-size: large;
+    }
+    .checkbox-square{
+      position: relative;
+      top: -30px;
+      left: -160px;
+      border: 1px solid black;
+
+
+    }
+    #agree{
+      position: relative;
+      left: 60px;
+      top: -102px;
+
+    }
+    button{
+      position: relative;
+      left: 40px;
+      top: -115px;
+      color:whitesmoke;
+      background-color: rgb(44, 44, 113);
+      padding: 10PX;
+      border-radius: 5px;
+
+    }
+
+    .contact-details {
+        line-height: 100px;
+        position: relative;
+        top: -550px;
+        right: 500px;
+        margin-right: 20px;
+        font-size: x-large;
+    
+    }
+    h2{
+      position: relative;
+      top: 40px;
+      text-align: center;
+      font-size: 40px;
+      color:black;
+      text-decoration: wavy;
+    }
+
+
+  </style>
+</head>
+<body>
+   <h2>Get in touch</h2>
+  
+  <form class="center_absolute display_grid" action="email.php" method="post">
+    <input class="w_22_rem margin_bottom_1_rem" type="text" name="name" placeholder="Name" autocomplete="off"> <br>
+    <input class="w_22_rem margin_bottom_1_rem" type="email" name="email" placeholder="Email" autocomplete="off"> <br>
+    <input class="w_22_rem margin_bottom_1_rem" type="text" name="subject" placeholder="Subject" autocomplete="off"> <br>
+
+    <textarea class="w_22_rem margin_bottom_1_rem" name="message" placeholder="Message..."></textarea>
+    <div class="primary-checkbox-container margin_bottom_2_rem">
+      <input class="checkbox-square" type="checkbox" required>
+      <div id="agree" class="primary-checkbox-description color_black font_size_small">I agree to the <a class="font_size_small color_primary" href="https://rizalcss.com/privacy-policy" target="_blank"> Privacy Policy</a>.</div>
+    </div>
+    <button  class="primary-button background_color_primary font_size_medium color_white border_radius_secondary" type="submit" name="send">
+      Send <i class="fa-solid fa-paper-plane primary-button-icon color_white"></i>
+    </button>
+
+    <div class="contact-details">
+      <div class="contact-details-item">
+        <i class="fas fa-phone"></i>
+        <span>Phone: +27 11 559 4555</span>
+      </div>
+      <div class="contact-details-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Address:UJ Auckland Park, Bunting Campus </span>
+      </div>
+      <div class="contact-details-item">
+        <i class="fas fa-envelope"></i>
+        <span>Email: softwareverve@gmail.com</span>
+      </div>
+    </div>
+  </form>
+  
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/rizalcss@2.1.0/js/components.min.js" integrity="sha256-3UCSBV90gv8A+IA1iZst64qLbw7u9y2Y6JbfRa21tKw=" crossorigin="anonymous"></script>
+</body>
+</html>

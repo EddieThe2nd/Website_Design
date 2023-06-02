@@ -16,9 +16,9 @@
         <div class="navigation">
             <div class="navigation-items">
                 <a href="./AboutUs-Page/AboutUsPage.php">About</a>
-                <a href="./Art/Art.php">Art</a>
-                <a href="./Fashion/Fashion.php">Fashion</a>
-                <a href="./Jewellery/Jewellery.php">jewellery</a>
+                <a href="./Shopping-Cart/art.php">Art</a>
+                <a href="./Shopping-Cart/fashion.php">Fashion</a>
+                <a href="./Shopping-Cart/jewellery.php">jewellery</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./ContactUs">Contact</a>
                 <a href="register_form.php">Sign up</a>
@@ -40,9 +40,9 @@
    
         </div>
         <div class="media-icons">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-twitter"></a>             
+            <a href="https://www.facebook.com/UJFADA/" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/ujfada/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/go2uj/status/1643238856202805248" class="fa fa-twitter"></a>             
         </div>
         <div class="slider-navigation">
             <div class="nav-btn active"></div>

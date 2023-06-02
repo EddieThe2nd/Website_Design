@@ -16,3 +16,8 @@ body{
     text-align: center;
     position: relative;
 }
+
+img{
+    width: 150px;
+    height: 120px;
+}

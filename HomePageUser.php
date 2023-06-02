@@ -1,4 +1,16 @@
+<?php
+Session_start();
+require('./config/server.php');
+$user_id =  $_SESSION['user_id'];
 
+$stmt = $connection->prepare("SELECT `profile_picture` FROM `users` WHERE `user_id` = ?");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$stmt->bind_result($profile_picture);
+$stmt->fetch();
+$stmt->close();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +21,93 @@
     <title>Document</title>
     <link rel="stylesheet" href="./homePage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Dropdown Button */
+.dropbtnA 
+{
+    /* background-color: #04AA6D; */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropbtnP 
+{
+    /* background-color: #04AA6D; */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdownA {
+  position: relative;
+  display: inline-block;
+}
+.dropdownP {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-contentA {
+  display: none;
+  position: absolute;
+  /* background-color: #f1f1f1; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-contentP {
+  display: none;
+  position: absolute;
+  /* background-color: #f1f1f1; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-contentA a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-contentP a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-contentA a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdownA:hover .dropdown-contentA {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+/* Change color of dropdown links on hover */
+.dropdown-contentP a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdownP:hover .dropdown-contentP {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+#user-pic
+{
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+    </style>
 </head>
 <body>
 
@@ -18,13 +117,26 @@
         <div class="navigation">
             <div class="navigation-items">
                 <a href="./AboutUs-Page/AboutUsPage.php">About</a>
-                <a href="./Shopping-Cart/art.php">Art</a>
-                <a href="./Shopping-Cart/fashion.php">Fashion</a>
-                <a href="./Shopping-Cart/jewellery.php">jewellery</a>
+                <div class="dropdownP">
+                    <a href="" class="dropbtnP">Products</a>
+                    <div class="dropdown-contentP">
+                        <a href="./Shopping-Cart/art.php">Art</a>
+                        <a href="./Shopping-Cart/fashion.php">Fashion</a>
+                        <a href="./Shopping-Cart/jewellery.php">jewellery</a>
+                    </div>
+                </div>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./ContactUs">Contact</a>
-                <!-- <a href="logout.php" class="btn">Logout</a> -->
-            </div>
+
+                <div class="dropdownA">
+                    <a href="" class="dropbtnA"><img src="./profile_pictures/<?php echo $profile_picture; ?>" id="user-pic" ></a>
+                    <div class="dropdown-contentA">
+                    <a href="profile.php"> Edit Profile</a>
+                    <a href="#" id="subMenuLink">Settings & Privacy</a>
+                    <a href="#" id="subMenuLink">Help & support</a>
+                    <a href="logout.php" id="subMenuLink">Log Out</a>
+                </div>
+</div>
         </div>
     </header>
     <section class="home">

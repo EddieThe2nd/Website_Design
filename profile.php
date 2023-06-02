@@ -133,6 +133,7 @@ $stmt->close();
         max-height: 400px;
         margin-bottom: 20px;
     }
+    
     </style>
 </head>
 <body>

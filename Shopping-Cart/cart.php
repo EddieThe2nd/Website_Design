@@ -91,7 +91,7 @@ if(isset($_GET['delete_all'])){
             </tbody>
         </table>
         <div class="checkout-btn">
-            <a href="checkout.php" class="btn <?=($grand_total>1)?'':'disabled'?>">proceed to checkout</a>
+            <a href="../payment gateway/Payment.php" class="btn <?=($grand_total>1)?'':'disabled'?>">proceed to checkout</a>
         </div>
     </div>
     

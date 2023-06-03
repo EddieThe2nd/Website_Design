@@ -47,6 +47,15 @@ if(isset($_POST['add_to_cart'])){
         <div class="menu-btn"></div>
         <div class="navigation">
             <div class="navigation-items">
+            <?php
+if (isset($_SERVER['HTTP_REFERER'])) {
+    $previousPage = $_SERVER['HTTP_REFERER'];
+} else {
+    $previousPage = 'javascript:history.go(-1)';
+}
+?>
+
+<a href="<?php echo $previousPage; ?>">Back</a>
                 <a href="./AboutUs-Page/AboutUsPage.php">About</a>
                 <a href="./fashion.php">Fashion</a>
                 <a href="./art.php">Art</a>

@@ -1,12 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url(./wp8594953.jpg);
 
   
 }
 
 .container {
-  background-image: url(./wp8594953.jpg);
+  background-image: url(./featuredBackgr.gif);
   background-repeat: no-repeat;
   background-size: cover; /* Zoom out background image */
   background-position: center center;
@@ -44,7 +45,7 @@ h1.h1 {
   background-color: rgb(123, 123, 125);
   border-radius: 30px;
   margin-right: 40px;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .flex-item:hover {
@@ -77,11 +78,11 @@ iframe{
 }
 div.wpb_column{
   align-content: center;
-  width: 100%;
-  margin-left: 50%;
+  width: 1000px;
+  margin-left: 37%;
 }
 h1{
-  color:rgb(8, 8, 84);
+  color:whitesmoke;
   font-size: 50px;
 }
 

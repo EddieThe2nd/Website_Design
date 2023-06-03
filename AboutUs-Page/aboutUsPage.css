@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  background-image: url(./featuredBackgr.gif);
+  background-image: url(./wp8594953.jpg);
   background-repeat: no-repeat;
   background-size: cover; /* Zoom out background image */
   background-position: center center;
@@ -20,8 +20,8 @@ body {
   image-rendering: auto; /* Enhance background image quality */
 }
 
-h1 {
-  color:rgb(8, 8, 84);
+h1.h1 {
+  color:whitesmoke;
   font-size: 70px;
 }
 
@@ -49,14 +49,39 @@ h1 {
 
 .flex-item:hover {
   background-color: #ddd;
+  transition: 1s;
   transform: scale(1.05); /* Zoom in slightly on hover */
 }
 
 h2 {
-  color:rgb(8, 8, 84) ;
+  color:rgb(8, 8, 84);
 }
 
 p {
   color:rgb(8, 8, 84);
   font-size: 17px;
 }
+p.center{
+  color:whitesmoke;
+  border-radius: 30px;
+  text-decoration: underline;
+}
+iframe{
+  width: 100%;
+  border-radius: 10px;
+}
+#tour{
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+div.wpb_column{
+  align-content: center;
+  width: 100%;
+  margin-left: 50%;
+}
+h1{
+  color:rgb(8, 8, 84);
+  font-size: 50px;
+}
+

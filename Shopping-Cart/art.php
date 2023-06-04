@@ -60,7 +60,7 @@ if (isset($_POST['add_to_cart'])) {
                 <a href="./fashion.php">Fashion</a>
                 <a href="./jewellery.php">jewellery</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
-                <a href="./ContactUs">Contact</a>
+                <a href="./email-form">Contact</a>
                 <a href="cart.php" class="cart"><i class='fas fa-shopping-cart'></i><span><?php echo $row_count; ?></span></a>
             </div>
         </div>

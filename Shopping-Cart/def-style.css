@@ -1,0 +1,20 @@
+body{
+    background-image: url('./error\ 4.jpg');
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    margin-top: 400px;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+}
+
+span{
+    margin-left: 700px;
+}

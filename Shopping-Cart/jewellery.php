@@ -60,7 +60,7 @@ if (isset($_SERVER['HTTP_REFERER'])) {
                 <a href="./fashion.php">Fashion</a>
                 <a href="./art.php">Art</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
-                <a href="./ContactUs">Contact</a>
+                <a href="./email-form">Contact</a>
                 <a href="cart.php" class="cart"><i class="fas fa-shopping-cart"></i><span><?php echo $row_count; ?></span></a>
 
                

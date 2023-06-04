@@ -20,7 +20,7 @@
                 <a href="./Shopping-Cart/fashion.php">Fashion</a>
                 <a href="./Shopping-Cart/jewellery.php">jewellery</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
-                <a href="./ContactUs">Contact</a>
+                <a href="./email-form">Contact</a>
                 <a href="register_form.php">Sign up</a>
                
             </div>

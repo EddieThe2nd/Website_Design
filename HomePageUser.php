@@ -126,7 +126,7 @@ $stmt->close();
                     </div>
                 </div>
                 <a href="./Artists/ArtistPage.php">Artists</a>
-                <a href="./ContactUs">Contact</a>
+                <a href="./email-form">Contact</a>
 
                 <div class="dropdownA">
                     <a href="" class="dropbtnA"><img src="./profile_pictures/<?php echo $profile_picture; ?>" id="user-pic" ></a>

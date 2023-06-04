@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+h1{
+  color: #15406e;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(./fashionBackground.jpg);
+  background-size: cover;
+  width: 100VW;
+  height: auto;
+  image-rendering: optimizeQuality;
+}
+
+.product {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  margin: 30px;
+  margin-left: 65px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+}
+img{
+      width: 550px;
+      height: 200px;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product img:hover {
+  transform: scale(1.5); /* Zoom in slightly on hover */
+}
+
+.product .name {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product .price {
+  font-weight: bold;
+  color: green;
+}
+
+.product .add-to-cart {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgb(216, 215, 215);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.third_row{
+  margin-left: 90px;
+}
+.second_row{
+  margin-left: 90px;
+
+}
+.first-row{
+  margin-left: 90px;
+
+}

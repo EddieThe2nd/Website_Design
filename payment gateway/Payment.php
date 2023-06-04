@@ -60,7 +60,7 @@ $stmt_address->close();
 $stmt_card->close();
 $connection->close();
 
-header("Location: ../HomePageUser.php"); //redirect to success page after inserting the data
+header("Location: order complete.php"); //redirect to success page after inserting the data
 exit;
 }
 
@@ -104,13 +104,13 @@ exit;
                 </div>
                 <div class="inputBox">
                     <span>city :</span>
-                    <input type="text" name="city"placeholder="mumbai">
+                    <input type="text" name="city"placeholder="Soweto">
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>state :</span>
-                        <input type="text" name="state" placeholder="india">
+                        <input type="text" name="state" placeholder="Limpopo">
                     </div>
                     <div class="inputBox">
                         <span>zip code :</span>
@@ -130,7 +130,7 @@ exit;
                 </div>
                 <div class="inputBox">
                     <span>name on card :</span>
-                    <input type="text" placeholder="mr. john deo" name="card_holder_name">
+                    <input type="text" placeholder="MR BEAN" name="card_holder_name">
                 </div>
                 <div class="inputBox">
                     <span>credit card number :</span>
@@ -157,6 +157,7 @@ exit;
         </div>
 
         <input type="submit" value="proceed to checkout" class="submit-btn" name="Proceed">
+        
 
     </form>
 

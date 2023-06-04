@@ -23,7 +23,8 @@ $surname = $row['last_name'];
 $email = $row['email'];
 $phone = $row['contact_no'];
 
-if (isset($_POST['closeup'])) {
+if (isset($_POST['closeup'])) 
+{
     $cart_query = mysqli_query($connection, "SELECT * FROM `cart`");
     $price_total = 0;
     $product_name = array(); // Initialize the array before the loop

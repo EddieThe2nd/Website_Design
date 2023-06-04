@@ -75,7 +75,7 @@ if(isset($_POST['update_product'])){
                         echo '<tr>
                             <td><img src="image/'.$row['image'].'"></td>
                             <td>'.$row['name'].'</td>
-                            <td>$'.$row['price'].'/-</td>
+                            <td>R'.$row['price'].'/-</td>
                             <td>
                                 <a href="admin.php?delete='.$row['id'].'" class="delete-btn" onclick="return confirm(\'Are you sure you want to delete this item?\')"><i class="glyphicon glyphicon-trash"></i>Delete</a>
                                 <a href="admin.php?edit='.$row['id'].'" class="option-btn"><i class="far fa-edit"></i>Update</a>

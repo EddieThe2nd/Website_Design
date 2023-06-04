@@ -8,8 +8,12 @@ $query = "SELECT * FROM `products` WHERE `image` LIKE '%fashion%'";
 $result = mysqli_query($connection, $query);
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+// Retrieve the number of items in the cart
+$row_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+
 // Handle the form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
+    $id = $_POST['id'];
     $name = $_POST['name'];
     $price = $_POST['price'];
     $image = $_POST['image'];
@@ -18,24 +22,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
     $product = array(
         'name' => $name,
         'price' => $price,
-        'image' => $image
+        'image' => $image,
+        'quantity' => 1  // Include the initial quantity
     );
 
     // Check if the shopping cart is already set in the session
     if (isset($_SESSION['cart'])) {
         // If the product is already in the cart, update the quantity
-        if (array_key_exists($name, $_SESSION['cart'])) {
-            $_SESSION['cart'][$name]['quantity'] += 1;
+        if (array_key_exists($id, $_SESSION['cart'])) {
+            $_SESSION['cart'][$id]['quantity'] += 1;
         } else {
             // Add the product to the existing cart
-            $_SESSION['cart'][$name] = $product;
-            $_SESSION['cart'][$name]['quantity'] = 1;
+            $_SESSION['cart'][$id] = $product;
         }
     } else {
         // Create a new cart and add the product
         $_SESSION['cart'] = array();
-        $_SESSION['cart'][$name] = $product;
-        $_SESSION['cart'][$name]['quantity'] = 1;
+        $_SESSION['cart'][$id] = $product;
     }
 
     // Display a success message
@@ -55,33 +58,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
     
 </head>
 <body>
-<header id="header">
-        <a  href="#"><img id="Logo-header" src="DesignEclatlogo1.png" alt="im not available"></a>
+    <header id="header">
+        <a href="#"><img id="Logo-header" src="DesignEclatlogo1.png" alt="im not available"></a>
         <div class="menu-btn"></div>
         <div class="navigation">
             <div class="navigation-items">
-            <?php
-if (isset($_SERVER['HTTP_REFERER'])) {
-    $previousPage = $_SERVER['HTTP_REFERER'];
-} else {
-    $previousPage = 'javascript:history.go(-1)';
-}
-?>
-
-<a href="<?php echo $previousPage; ?>">Back</a>
+                <?php
+                if (isset($_SERVER['HTTP_REFERER'])) {
+                    $previousPage = $_SERVER['HTTP_REFERER'];
+                } else {
+                    $previousPage = 'javascript:history.go(-1)';
+                }
+                ?>
+                <a href="<?php echo $previousPage; ?>">Back</a>
                 <a href="./AboutUs-Page/AboutUsPage.php">About</a>
                 <a href="./jewellery.php">Jewellery</a>
                 <a href="./art.php">Art</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./email-form">Contact</a>
                 <a href="cart.php" class="cart"><i class='fas fa-shopping-cart'></i><span><?php echo $row_count; ?></span></a>
-               
             </div>
         </div>
     </header>
     <h1>Fashion</h1>
 
-    <?php if(isset($message)): ?>
+    <?php if (isset($message) && !empty($message)): ?>
         <div class="message"><?php echo $message; ?></div>
     <?php endif; ?>
 
@@ -91,6 +92,7 @@ if (isset($_SERVER['HTTP_REFERER'])) {
             <p class="price">R<?php echo $product['price']; ?></p>
             <img src="image/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" width="200">
             <form action="" method="post">
+                <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
                 <input type="hidden" name="name" value="<?php echo $product['name']; ?>">
                 <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
                 <input type="hidden" name="image" value="<?php echo $product['image']; ?>">

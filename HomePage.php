@@ -166,7 +166,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>R150</h4>
+                
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
             </div>
@@ -182,7 +182,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>R800</h4>
+                
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
 
@@ -199,7 +199,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>R400</h4>
+                
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
                 </div>

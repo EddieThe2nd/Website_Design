@@ -193,9 +193,9 @@ $stmt->close();
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>R150</h4>
+                
                 </div>
-                <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
+                
             </div>
             <div class="pro">
                 <img src="FeaturedProductsImages/TERA-03 sports shoe.png" alt="">
@@ -209,9 +209,9 @@ $stmt->close();
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>R800</h4>
+                
                 </div>
-                <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
+                
 
             </div>
             <div class="pro">
@@ -226,9 +226,9 @@ $stmt->close();
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>R400</h4>
+                
                 </div>
-                <a href="#"><i class="fa fa-shopping-cart"></i></i></a>
+                
                 </div>
 
         </div>

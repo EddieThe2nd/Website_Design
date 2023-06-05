@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Truck Animation Using </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url('./bg2.jpg');
+            background-size: cover;
+            background-position: bottom;
+            background-color: rgba(0, 0, 0, 0.7);
+            background-blend-mode: overlay;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .wrap{
+            position: absolute;
+            height: 150px;
+            bottom: 100px;
+            width: 100%;
+        }
+
+        .image{
+            position: absolute;
+            width: 250px;
+        }
+        .truck-img{
+            bottom: 0;
+            left: -150px;
+            z-index: 2;
+            animation: truck 10s linear infinite;
+
+        }
+        @keyframes truck{
+            40%, 70%{
+                left: 60%;
+            }
+            100%{
+                left: 100%;
+            }
+        }
+
+
+        .box-img{
+            width: 45px;
+            z-index: 1;
+            top: 55%;
+            left: 60%;
+            opacity: 0;
+            animation: box 10s linear infinite;
+
+        }
+        .box-img2{
+            animation-delay: 1s;
+        }
+
+        @keyframes box{
+            0%, 40%{
+                opacity: 0;
+                left: 55%;
+            }
+            50%{
+                opacity: 1;
+                left: 60%;
+            }
+            60%, 100%{
+                opacity: 0;
+                left: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="./truck2.png" alt="" class="image truck-img">
+        <img src="./box.png" alt="" class="image box-img">
+        <img src="./box.png" alt="" class="image box-img box-img2">
+    </div>
+
+</body>
+</html>

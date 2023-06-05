@@ -84,12 +84,20 @@ if (isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="orderstyle.css">
 </head>
 <body>
-    
+<div class="wrap">
+        <img src="../payment gateway/Delivery Animation/truck2.png" alt="" class="image truck-img">
+        <img src="../payment gateway/Delivery Animation/box.png" alt="" class="image box-img">
+        <img src="../payment gateway/Delivery Animation/box.png" alt="" class="image box-img box-img2">
+    </div>
     <div class="container">
+
         <form action="" method="post">
-            <button type="submit" class="btn" name="submit">ORDER COMPLETE</button>
+            <button type="submit" class="btnComplete" name="submit">ORDER COMPLETE</button>
         </form>
-        <button type="submit" onclick="openPopup()" class="btn">NEXT</button>
+        <button type="submit" onclick="openPopup()" class="btnNext">NEXT</button>
+
+
+
         <form action="../HomePageUser.php" method="post">
             <div class="popup" id="popup">
                 <img src="./images/order complete.png" alt="">

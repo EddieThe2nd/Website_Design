@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="flex">
-            <a href="" class="logo">Art Pieces</a>
+            <a href="" class="logo"></a>
             <div class="navbar">
 
                 <a href="products.php">shop</a>

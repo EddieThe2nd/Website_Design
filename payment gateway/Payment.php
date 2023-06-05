@@ -109,7 +109,7 @@ exit;
 
                 <div class="flex">
                     <div class="inputBox">
-                        <span>state :</span>
+                        <span>Province :</span>
                         <input type="text" name="state" placeholder="Limpopo">
                     </div>
                     <div class="inputBox">

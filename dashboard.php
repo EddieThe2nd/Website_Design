@@ -26,9 +26,9 @@ session_start();
 		<h2>Dashboard</h2>
 		<ul>
 			<li><a href="AdminUsers.php">Users</a></li>
-			<li><a href="#">Products</a></li>
-			<li><a href="#">Orders</a></li>
-			<li><a href="#">Deliveries</a></li>
+			<li><a href="./Shopping-Cart/product_form.php">Products</a></li>
+			<li><a href="AdminOrders.php">Orders</a></li>
+			<li><a href="AdminDeliveries.php">Deliveries</a></li>
 			<li><a href="#">Settings</a></li>
 			<li><a href="logout.php" class="btn">Logout</a></li>
 		</ul>

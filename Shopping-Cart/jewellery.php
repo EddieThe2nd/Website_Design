@@ -1,6 +1,9 @@
 <?php
 include 'connection.php';
 include 'headerPages.php';
+session_start(); // ensure you have started session if you haven't done so elsewhere
+
+$user_id = $_SESSION['user_id']; // get user id from session
 
 // Fetch the product data from the database
 $query = "SELECT * FROM `products` WHERE `image` LIKE '%jewellery%'";
@@ -13,11 +16,11 @@ if(isset($_POST['add_to_cart'])){
     $image = $_POST['image'];
     $quantity = 1;
     
-    $select_cart = mysqli_query($connection, "SELECT * FROM `cart` WHERE name='$name'");
+    $select_cart = mysqli_query($connection, "SELECT * FROM `cart` WHERE name='$name' AND user_id='$user_id'");
     if(mysqli_num_rows($select_cart) > 0){
         $message[] = 'Product already added in your cart';
     } else{
-        $query = "INSERT INTO `cart`(`name`, `price`, `image`, `quantity`) VALUES ('$name','$price','$image','$quantity')";
+        $query = "INSERT INTO `cart`(`name`, `price`, `image`, `quantity`, `user_id`) VALUES ('$name','$price','$image','$quantity','$user_id')";
         $insert_query = mysqli_query($connection, $query);
         if($insert_query){
             $message[] = 'Product added in your cart';
@@ -27,7 +30,6 @@ if(isset($_POST['add_to_cart'])){
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

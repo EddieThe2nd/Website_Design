@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'connection.php';
 include 'headerPages.php';
 
@@ -7,8 +8,11 @@ $query = "SELECT * FROM `products` WHERE `image` LIKE '%art%'";
 $result = mysqli_query($connection, $query);
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// Retrieve the number of items in the cart
-$row_count = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `cart`"));
+// Retrieve the number of items in the cart for this user
+$user_id = $_SESSION['user_id'];
+$row_count_query = mysqli_query($connection, "SELECT SUM(`quantity`) AS `total` FROM `cart` WHERE user_id='$user_id'");
+$data = mysqli_fetch_assoc($row_count_query);
+$row_count = $data['total'] ?? 0;
 
 if (isset($_POST['add_to_cart'])) {
     $name = $_POST['name'];
@@ -16,11 +20,13 @@ if (isset($_POST['add_to_cart'])) {
     $image = $_POST['image'];
     $quantity = 1;
 
-    $select_cart = mysqli_query($connection, "SELECT * FROM `cart` WHERE name='$name'");
+    // Check if this product is already in the cart for this user
+    $select_cart = mysqli_query($connection, "SELECT * FROM `cart` WHERE name='$name' AND user_id='$user_id'");
     if (mysqli_num_rows($select_cart) > 0) {
         $message[] = 'Product already added in your cart';
     } else {
-        $query = "INSERT INTO `cart`(`name`, `price`, `image`, `quantity`) VALUES ('$name','$price','$image','$quantity')";
+        // Insert the product into the cart for this user
+        $query = "INSERT INTO `cart`(`user_id`, `name`, `price`, `image`, `quantity`) VALUES ('$user_id','$name','$price','$image','$quantity')";
         $insert_query = mysqli_query($connection, $query);
         if ($insert_query) {
             $message[] = 'Product added in your cart';
@@ -30,6 +36,8 @@ if (isset($_POST['add_to_cart'])) {
     }
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

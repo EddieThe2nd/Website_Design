@@ -1,11 +1,15 @@
+
 <?php
 include 'connection.php';
+session_start(); // ensure you have started session if you haven't done so elsewhere
+
+$user_id = $_SESSION['user_id']; // get user id from session
 
 if(isset($_POST['update_btn'])){
     $update_value = $_POST['update_quantity'];
     $update_id = $_POST['update_quantity_id'];
 
-    $update_query = mysqli_query($connection,"UPDATE `cart` SET quantity='$update_value' WHERE id='$update_id'") or die ('query failed');
+    $update_query = mysqli_query($connection,"UPDATE `cart` SET quantity='$update_value' WHERE id='$update_id' AND user_id='$user_id'") or die ('query failed');
 
     if($update_query){
         header('location:cart.php');
@@ -14,16 +18,19 @@ if(isset($_POST['update_btn'])){
 
 if(isset($_GET['remove'])){
     $remove_id = $_GET['remove'];
-    mysqli_query($connection,"DELETE FROM `cart` WHERE id='$remove_id'");
+    mysqli_query($connection,"DELETE FROM `cart` WHERE id='$remove_id' AND user_id='$user_id'");
     header('location:cart.php');
 }
 if(isset($_GET['delete_all'])){
-    
-    mysqli_query($connection,"DELETE FROM `cart`");
+    mysqli_query($connection,"DELETE FROM `cart` WHERE user_id='$user_id'");
     header('location:cart.php');
 }
 
+    $select_cart = mysqli_query($connection,"SELECT * FROM `cart` WHERE user_id='$user_id'");
+
 ?>
+
+
 
 
 

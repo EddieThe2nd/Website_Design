@@ -3,46 +3,37 @@ session_start();
 include 'connection.php';
 include 'headerPages.php';
 
-// Fetch the fashion products from the database
+// Fetch the product data from the database
 $query = "SELECT * FROM `products` WHERE `image` LIKE '%fashion%'";
 $result = mysqli_query($connection, $query);
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// Retrieve the number of items in the cart
-$row_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+// Retrieve the number of items in the cart for this user
+$user_id = $_SESSION['user_id'];
+$row_count_query = mysqli_query($connection, "SELECT SUM(`quantity`) AS `total` FROM `cart` WHERE user_id='$user_id'");
+$data = mysqli_fetch_assoc($row_count_query);
+$row_count = $data['total'] ?? 0;
 
-// Handle the form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
-    $id = $_POST['id'];
+if (isset($_POST['add_to_cart'])) {
     $name = $_POST['name'];
     $price = $_POST['price'];
     $image = $_POST['image'];
+    $quantity = 1;
 
-    // Create an array to hold the product details
-    $product = array(
-        'name' => $name,
-        'price' => $price,
-        'image' => $image,
-        'quantity' => 1  // Include the initial quantity
-    );
-
-    // Check if the shopping cart is already set in the session
-    if (isset($_SESSION['cart'])) {
-        // If the product is already in the cart, update the quantity
-        if (array_key_exists($id, $_SESSION['cart'])) {
-            $_SESSION['cart'][$id]['quantity'] += 1;
-        } else {
-            // Add the product to the existing cart
-            $_SESSION['cart'][$id] = $product;
-        }
+    // Check if this product is already in the cart for this user
+    $select_cart = mysqli_query($connection, "SELECT * FROM `cart` WHERE name='$name' AND user_id='$user_id'");
+    if (mysqli_num_rows($select_cart) > 0) {
+        $message[] = 'Product already added in your cart';
     } else {
-        // Create a new cart and add the product
-        $_SESSION['cart'] = array();
-        $_SESSION['cart'][$id] = $product;
+        // Insert the product into the cart for this user
+        $query = "INSERT INTO `cart`(`user_id`, `name`, `price`, `image`, `quantity`) VALUES ('$user_id','$name','$price','$image','$quantity')";
+        $insert_query = mysqli_query($connection, $query);
+        if ($insert_query) {
+            $message[] = 'Product added in your cart';
+        } else {
+            $message[] = 'Error adding product to cart';
+        }
     }
-
-    // Display a success message
-    $message = "Product added to cart successfully!";
 }
 ?>
 

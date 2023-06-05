@@ -42,7 +42,7 @@ if(isset($_POST['add_product'])){
     <title>Adding Products</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'headerAdmin.php'; ?>
     <?php
         if(isset($message)){
             foreach($message as $message){

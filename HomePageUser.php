@@ -132,8 +132,7 @@ $stmt->close();
                     <a href="" class="dropbtnA"><img src="./profile_pictures/<?php echo $profile_picture; ?>" id="user-pic" ></a>
                     <div class="dropdown-contentA">
                     <a href="profile.php"> Edit Profile</a>
-                    <a href="#" id="subMenuLink">Settings & Privacy</a>
-                    <a href="#" id="subMenuLink">Help & support</a>
+                    <a href="./Shopping-Cart/cart.php" id="subMenuLink">Cart</a>
                     <a href="logout.php" id="subMenuLink">Log Out</a>
                 </div>
 </div>

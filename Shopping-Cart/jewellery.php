@@ -1,30 +1,36 @@
 <?php
+session_start();
 include 'connection.php';
 include 'headerPages.php';
-session_start(); // ensure you have started session if you haven't done so elsewhere
-
-$user_id = $_SESSION['user_id']; // get user id from session
 
 // Fetch the product data from the database
 $query = "SELECT * FROM `products` WHERE `image` LIKE '%jewellery%'";
 $result = mysqli_query($connection, $query);
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-if(isset($_POST['add_to_cart'])){
+// Retrieve the number of items in the cart for this user
+$user_id = $_SESSION['user_id'];
+$row_count_query = mysqli_query($connection, "SELECT SUM(`quantity`) AS `total` FROM `cart` WHERE user_id='$user_id'");
+$data = mysqli_fetch_assoc($row_count_query);
+$row_count = $data['total'] ?? 0;
+
+if (isset($_POST['add_to_cart'])) {
     $name = $_POST['name'];
     $price = $_POST['price'];
     $image = $_POST['image'];
     $quantity = 1;
-    
+
+    // Check if this product is already in the cart for this user
     $select_cart = mysqli_query($connection, "SELECT * FROM `cart` WHERE name='$name' AND user_id='$user_id'");
-    if(mysqli_num_rows($select_cart) > 0){
+    if (mysqli_num_rows($select_cart) > 0) {
         $message[] = 'Product already added in your cart';
-    } else{
-        $query = "INSERT INTO `cart`(`name`, `price`, `image`, `quantity`, `user_id`) VALUES ('$name','$price','$image','$quantity','$user_id')";
+    } else {
+        // Insert the product into the cart for this user
+        $query = "INSERT INTO `cart`(`user_id`, `name`, `price`, `image`, `quantity`) VALUES ('$user_id','$name','$price','$image','$quantity')";
         $insert_query = mysqli_query($connection, $query);
-        if($insert_query){
+        if ($insert_query) {
             $message[] = 'Product added in your cart';
-        } else{
+        } else {
             $message[] = 'Error adding product to cart';
         }
     }
@@ -40,6 +46,86 @@ if(isset($_POST['add_to_cart'])){
     <title>Jewellery Page</title>
     <link rel="stylesheet" href="jewellery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    
+        /* Dropdown Button */
+.dropbtnA 
+{
+    /* background-color: #04AA6D; */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropbtnP 
+{
+    /* background-color: #04AA6D; */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdownA {
+  position: relative;
+  display: inline-block;
+}
+.dropdownP {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-contentA {
+  display: none;
+  position: absolute;
+  /* background-color: #f1f1f1; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-contentP {
+  display: none;
+  position: absolute;
+  /* background-color: #f1f1f1; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-contentA a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-contentP a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-contentA a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdownA:hover .dropdown-contentA {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+/* Change color of dropdown links on hover */
+.dropdown-contentP a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdownP:hover .dropdown-contentP {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+    </style>
 
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 </head>
@@ -57,10 +143,15 @@ if (isset($_SERVER['HTTP_REFERER'])) {
 }
 ?>
 
-<a href="<?php echo $previousPage; ?>">Back</a>
+                <a href="../HomePageUser.php">Back</a>
                 <a href="./AboutUs-Page/AboutUsPage.php">About</a>
-                <a href="./fashion.php">Fashion</a>
-                <a href="./art.php">Art</a>
+                <div class="dropdownP">
+                    <a href="" class="dropbtnP">Products</a>
+                    <div class="dropdown-contentP">
+                        <a href="art.php">Art</a>
+                        <a href="fashion.php">Fashion</a>
+                    </div>
+                </div>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./email-form">Contact</a>
                 <a href="cart.php" class="cart"><i class="fas fa-shopping-cart"></i><span><?php echo $row_count; ?></span></a>

@@ -103,7 +103,7 @@ if (isset($_SESSION['user_id'])) {
             <div class="popup" id="popup">
                 <img src="./images/order complete.png" alt="">
                 <h2>Thank you</h2>
-                <p><?php echo "HI, $name $surname\nYour order has been sent for shipping and an invoice has been sent to the following email address:\n\n$email"; ?></p>
+                <p><?php echo "HI, $name $surname\nYour order has been sent for shipping and an invoice will been sent to the following email address:\n\n$email"; ?></p>
                 <button type="submit" id="closeup" name="closeup">OK</button>
             </div>
         </form>

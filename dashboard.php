@@ -39,7 +39,7 @@ session_start();
 		<div class="panel">
 			<h2>Users</h2>
 			<div class="number">
-			<span class="count" data-count="500">0</span>
+			<span class="count" data-count="20">0</span>
 			<div class="bubble"></div>
 			</div>
 		</div>
@@ -47,7 +47,7 @@ session_start();
 		<div class="panel">
 			<h2>Orders</h2>
 			<div class="number">
-			<span class="count" data-count="2500">0</span>
+			<span class="count" data-count="92">0</span>
 			<div class="bubble"></div>
 			</div>
 		</div>
@@ -55,7 +55,7 @@ session_start();
 		<div class="panel">
 			<h2>Visitors</h2>
 			<div class="number">
-				<span class="count" data-count="10000">0</span>
+				<span class="count" data-count="507">0</span>
 			<div class="bubble"></div>
 			</div>
 		</div>

@@ -57,7 +57,7 @@ if(isset($_GET['delete_all'])){
                         while($fetch_cart = mysqli_fetch_assoc($select_cart)){
                 ?>
                 <tr>
-                    <td><img src="image/<?php echo $fetch_cart['image']; ?>" ></td>
+                    <td><img src="image/<?php echo $fetch_cart['image']; ?>"></td>
                     <td><?php echo $fetch_cart['name']; ?></td>
                     <td>R<?php echo $fetch_cart['price']; ?></td>
                     <td class="quantity">

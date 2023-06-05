@@ -133,7 +133,7 @@
             <p>Get E-mail updates about our latest projects and <span> special offers.</span></p>
         </div>
         <div class="form">
-            <input type="text" placeholder="Your email address">
+            <input type="email" placeholder="Your email address">
             <button class="normal">Sign Up</button>
         </div>
     </section>

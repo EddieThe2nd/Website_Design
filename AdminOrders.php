@@ -1,8 +1,10 @@
 <?php
 require('./config/server.php');	
 
-$sql = "SELECT `user_id`, `first_name`, `last_name`, `email`, `password`, `contact_no`, `registered_at`,  `user_address`, `username`, `age`, `Id_number`, `gender`, `Bio` FROM `users`";
+$sql = " SELECT `id`, `user_id`, `name`, `surname`, `email`, `total_products`, `total_price` FROM `orders`";
 $result = mysqli_query($connection, $sql);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,13 +21,13 @@ $result = mysqli_query($connection, $sql);
     <header>
 		<div class="profile">
 			<img src="./FeaturedProductsImages/user.png" alt="Profile Picture">
-			<h3>Andrew Letsepe</h3>
+			<h3>Admin</h3>
 		</div>
 	</header>
 	<div class="sidebar">
 		<h2>Dashboard</h2>
 		<ul>
-            <li><a href="AdminUsers.php">Users</a></li>
+			<li><a href="AdminUsers.php">Users</a></li>
 			<li><a href="./Shopping-Cart/product_form.php">Products</a></li>
 			<li><a href="AdminOrders.php">Orders</a></li>
 			<li><a href="AdminDeliveries.php">Deliveries</a></li>
@@ -37,18 +39,14 @@ $result = mysqli_query($connection, $sql);
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">Order ID</th>
                     <th scope="col">User ID</th>
-                    <th scope="col">Username</th>
                     <th scope="col">FirstName</th>
                     <th scope="col">Last Name</th>
-                    <th scope="col">ID Number</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Age</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Contact No</th>
-                    <th scope="col">Registered At</th>
-                    <th scope="col">User Address:</th>
-                    <th scope="col">Bio</th>
+                    <th scope="col">Products Ordered</th>
+                    <th scope="col">Price</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -56,22 +54,14 @@ $result = mysqli_query($connection, $sql);
                     if($result->num_rows > 0){
                         while($row = $result->fetch_assoc()){
                             echo "<tr>
+                                <td>$row[id]</td>
                                 <td>$row[user_id]</td>
-                                <td>$row[username]</td>
-                                <td>$row[first_name]</td>
-                                <td>$row[last_name]</td>
-                                <td>$row[Id_number]</td>
-                                <td>$row[gender]</td>
-                                <td>$row[age]</td>
+                                <td>$row[name]</td>
+                                <td>$row[surname]</td>
                                 <td>$row[email]</td>
-                                <td>$row[contact_no]</td>
-                                <td>$row[registered_at]</td>
-                                <td>$row[user_address]</td>
-                                <td>$row[Bio]</td>
-                                <td>
-                                    <a class='btn btn-primary btn-sm' href='deleteUser.php?id=$row[user_id]'>Delete</a>
-                                    <form><input:submit</form>
-                                </td>
+                                <td>$row[total_products]</td>
+                                <td>$row[total_price]</td>
+                                
                             </tr>
                             ";
                         }

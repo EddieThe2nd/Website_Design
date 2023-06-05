@@ -36,18 +36,17 @@ if (isset($_POST['add_to_cart'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Page</title>
+    <title>Art Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="Fashion.css">
-    
 </head>
+
 <body>
     <header id="header">
         <a href="#"><img id="Logo-header" src="DesignEclatlogo1.png" alt="im not available"></a>
@@ -63,8 +62,8 @@ if (isset($_POST['add_to_cart'])) {
                 ?>
                 <a href="<?php echo $previousPage; ?>">Back</a>
                 <a href="./AboutUs-Page/AboutUsPage.php">About</a>
-                <a href="./jewellery.php">Jewellery</a>
                 <a href="./art.php">Art</a>
+                <a href="./jewellery.php">jewellery</a>
                 <a href="./Artists/ArtistPage.php">Artists</a>
                 <a href="./email-form">Contact</a>
                 <a href="cart.php" class="cart"><i class='fas fa-shopping-cart'></i><span><?php echo $row_count; ?></span></a>
@@ -73,9 +72,13 @@ if (isset($_POST['add_to_cart'])) {
     </header>
     <h1>Fashion</h1>
 
-    <?php if (isset($message) && !empty($message)): ?>
-        <div class="message"><?php echo $message; ?></div>
-    <?php endif; ?>
+    <?php
+    if (isset($message)) {
+        foreach ($message as $msg) {
+            echo '<div class="message">' . $msg . '</div>';
+        }
+    }
+    ?>
 
     <?php foreach ($products as $product): ?>
         <div class="product">
@@ -83,7 +86,6 @@ if (isset($_POST['add_to_cart'])) {
             <p class="price">R<?php echo $product['price']; ?></p>
             <img src="image/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" width="200">
             <form action="" method="post">
-                <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
                 <input type="hidden" name="name" value="<?php echo $product['name']; ?>">
                 <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
                 <input type="hidden" name="image" value="<?php echo $product['image']; ?>">

@@ -34,6 +34,7 @@ if (isset($_SESSION['user_id'])) {
 
             $stmt = $connection->prepare("INSERT INTO `orders`(`user_id`, `name`, `surname`, `email`, `total_products`, `total_price`) VALUES (?, ?, ?, ?, ?, ?)");
             $stmt->bind_param("issssi", $user_id, $name, $surname, $email, $total_product, $price_total);
+            mysqli_query($connection,"DELETE FROM `cart` WHERE user_id='$user_id'");
 
             if ($stmt->execute()) {
                 $order_id = $stmt->insert_id;

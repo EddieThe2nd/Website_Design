@@ -13,7 +13,7 @@
                 $select_rows = mysqli_query($connection,"SELECT * FROM `cart`") or die('query failed');
                 $row_count = mysqli_num_rows($select_rows);
             ?>
-           <a href="cart.php" class="cart"><i class="fas fa-shopping-cart"></i><span><?php echo $row_count; ?></span></a>
+           <!-- <a href="cart.php" class="cart"><i class="fas fa-shopping-cart"></i><span><?php //echo $row_count; ?></span></a> -->
 
         </div>
     </header>

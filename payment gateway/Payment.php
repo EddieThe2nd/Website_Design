@@ -76,6 +76,7 @@ exit;
     
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <title>Design Eclat</title>
 
 </head>
 <body>
